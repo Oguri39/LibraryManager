@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NormalLibrary.Libarian;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -130,11 +131,53 @@ namespace NormalLibrary
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Students.MainStudents homeStudents = new Students.MainStudents();
-            homeStudents.Show();
-            if(homeStudents != null)
+            string userName = txtUserIDLoginForm.Text.Trim();
+            string userPassword = txtPasswordLoginForm.Text.Trim();
+            if(userName == "" || userPassword == "")
             {
-                this.Hide();
+                MessageBox.Show("Please enter correct username and password");
+            }
+            else
+            {
+                if (DatabaseConnection.CheckUserLogin(userName, userPassword))
+                {
+                    if (Program.login_user.UserApproved == 0)
+                    {
+                        MessageBox.Show("Your account need verify... Please contact the library");
+                    }
+                    else {
+                        if (Program.login_user.UserRoles == 3)
+                        {
+                            Admin.AdminMain homeAdmin = new Admin.AdminMain();
+                            homeAdmin.Show();
+                            if (homeAdmin != null)
+                            {
+                                this.Hide();
+                            }
+                        }
+                        else if (Program.login_user.UserRoles == 2)
+                        {
+                            Libarian.LibarianMain homeLibarian = new Libarian.LibarianMain();
+                            homeLibarian.Show();
+                            if (homeLibarian != null)
+                            {
+                                this.Hide();
+                            }
+                        }
+                        else {
+                            Students.MainStudents homeStudents = new Students.MainStudents();
+                            homeStudents.Show();
+                            if (homeStudents != null)
+                            {
+                                this.Hide();
+                            }
+                        }
+                    }
+                   
+                }
+                else {
+                    MessageBox.Show("Please enter correct username and password");
+                }
             }
         }
 

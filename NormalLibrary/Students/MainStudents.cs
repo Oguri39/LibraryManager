@@ -58,5 +58,112 @@ namespace NormalLibrary.Students
                 Program.SendMessage(Handle, Program.WM_NCLBUTTONDOWN, Program.HT_CAPTION, 0);
             }
         }
+
+        private void btnHome_MouseHover(object sender, EventArgs e)
+        {
+            btnHome.ForeColor = Color.Firebrick;
+        }
+
+        private void btnBookself_MouseHover(object sender, EventArgs e)
+        {
+            btnBookself.ForeColor = Color.Firebrick;
+
+        }
+
+        private void btnContact_MouseHover(object sender, EventArgs e)
+        {
+            btnContact.ForeColor = Color.Firebrick;
+
+        }
+
+        private void btnProfile_MouseHover(object sender, EventArgs e)
+        {
+            btnProfile.ForeColor = Color.Firebrick;
+
+        }
+
+        private void btnFilterAll_MouseHover(object sender, EventArgs e)
+        {
+            btnFilterAll.ForeColor = Color.Firebrick;
+
+        }
+
+        private void btnFilterAuthor_MouseHover(object sender, EventArgs e)
+        {
+            btnFilterAuthor.ForeColor = Color.Firebrick;
+
+        }
+
+        private void btnFilterGenre_MouseHover(object sender, EventArgs e)
+        {
+            btnFilterGenre.ForeColor = Color.Firebrick;
+
+        }
+
+        private void btnHome_MouseLeave(object sender, EventArgs e)
+        {
+            btnHome.ForeColor = Color.Black;
+        }
+
+        private void btnBookself_MouseLeave(object sender, EventArgs e)
+        {
+            btnBookself.ForeColor = Color.Black;
+
+        }
+
+        private void btnContact_MouseLeave(object sender, EventArgs e)
+        {
+            btnContact.ForeColor = Color.Black;
+
+        }
+
+        private void btnProfile_MouseLeave(object sender, EventArgs e)
+        {
+            btnProfile.ForeColor = Color.Black;
+
+        }
+
+        private void btnFilterAll_MouseLeave(object sender, EventArgs e)
+        {
+            btnFilterAll.ForeColor = Color.Black;
+
+        }
+
+        private void btnFilterAuthor_MouseLeave(object sender, EventArgs e)
+        {
+            btnFilterAuthor.ForeColor = Color.Black;
+
+        }
+
+        private void btnFilterGenre_MouseLeave(object sender, EventArgs e)
+        {
+            btnFilterGenre.ForeColor = Color.Black;
+
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            panelFilter.Visible = true;
+            bookselfStudent.Visible = false;
+            contactStudent.Visible = false;
+            homeStudent.Visible = true;
+        }
+
+        private void btnBookself_Click(object sender, EventArgs e)
+        {
+            panelFilter.Visible = true;
+            bookselfStudent.Visible = true;
+            contactStudent.Visible = false;
+            homeStudent.Visible = false;
+            
+        }
+
+        private void btnContact_Click(object sender, EventArgs e)
+        {
+            panelFilter.Visible = false;
+            bookselfStudent.Visible = false;
+            contactStudent.Visible = true;
+            homeStudent.Visible = false;
+        }
     }
 }
