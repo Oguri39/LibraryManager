@@ -41,10 +41,10 @@
             this.txtPasswordLoginForm = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Label();
             this.panelLogin = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnForgetPasswordLoginForm = new System.Windows.Forms.Label();
             this.btnSignupLoginForm = new System.Windows.Forms.Label();
+            this.btnForgetPasswordLoginForm = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelForgotPassword = new System.Windows.Forms.Panel();
             this.btnSignupForgetPasswordForm = new System.Windows.Forms.Label();
             this.btnLoginForgetPasswordForm = new System.Windows.Forms.Label();
@@ -54,6 +54,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.txtUserIDForgetPasswordForm = new System.Windows.Forms.TextBox();
             this.panelSignup = new System.Windows.Forms.Panel();
+            this.txtConfirmPasswordSignup = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.btnLoginSignupForm = new System.Windows.Forms.Label();
             this.btnForgetPasswordSignupForm = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -63,8 +65,8 @@
             this.txtUserIdSignup = new System.Windows.Forms.TextBox();
             this.txtPasswordSignup = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtConfirmPasswordSignup = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.loginTop.SuspendLayout();
             this.panelBottom.SuspendLayout();
             this.panelLogin.SuspendLayout();
@@ -90,6 +92,7 @@
             // loginTop
             // 
             this.loginTop.BackColor = System.Drawing.Color.Transparent;
+            this.loginTop.Controls.Add(this.panel1);
             this.loginTop.Controls.Add(this.btnMinimize);
             this.loginTop.Controls.Add(this.btnResize);
             this.loginTop.Controls.Add(this.btnExit);
@@ -133,6 +136,7 @@
             // panelBottom
             // 
             this.panelBottom.BackColor = System.Drawing.Color.Transparent;
+            this.panelBottom.Controls.Add(this.flowLayoutPanel1);
             this.panelBottom.Controls.Add(this.label5);
             this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelBottom.Location = new System.Drawing.Point(0, 746);
@@ -239,27 +243,19 @@
             this.panelLogin.Size = new System.Drawing.Size(632, 190);
             this.panelLogin.TabIndex = 10;
             // 
-            // label1
+            // btnSignupLoginForm
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Handwriting", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 127);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Forget your password?";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lucida Handwriting", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 157);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(184, 20);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Don\'t have account?";
+            this.btnSignupLoginForm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSignupLoginForm.AutoSize = true;
+            this.btnSignupLoginForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSignupLoginForm.Font = new System.Drawing.Font("Lucida Handwriting", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignupLoginForm.ForeColor = System.Drawing.Color.Firebrick;
+            this.btnSignupLoginForm.Location = new System.Drawing.Point(203, 157);
+            this.btnSignupLoginForm.Name = "btnSignupLoginForm";
+            this.btnSignupLoginForm.Size = new System.Drawing.Size(100, 20);
+            this.btnSignupLoginForm.TabIndex = 13;
+            this.btnSignupLoginForm.Text = "Click here!";
+            this.btnSignupLoginForm.Click += new System.EventHandler(this.btnSignupLoginForm_Click);
             // 
             // btnForgetPasswordLoginForm
             // 
@@ -275,19 +271,27 @@
             this.btnForgetPasswordLoginForm.Text = "Click here!";
             this.btnForgetPasswordLoginForm.Click += new System.EventHandler(this.btnForgetPasswordLoginForm_Click);
             // 
-            // btnSignupLoginForm
+            // label6
             // 
-            this.btnSignupLoginForm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSignupLoginForm.AutoSize = true;
-            this.btnSignupLoginForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSignupLoginForm.Font = new System.Drawing.Font("Lucida Handwriting", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignupLoginForm.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnSignupLoginForm.Location = new System.Drawing.Point(203, 157);
-            this.btnSignupLoginForm.Name = "btnSignupLoginForm";
-            this.btnSignupLoginForm.Size = new System.Drawing.Size(100, 20);
-            this.btnSignupLoginForm.TabIndex = 13;
-            this.btnSignupLoginForm.Text = "Click here!";
-            this.btnSignupLoginForm.Click += new System.EventHandler(this.btnSignupLoginForm_Click);
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lucida Handwriting", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(23, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(184, 20);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Don\'t have account?";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Handwriting", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(23, 127);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 20);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Forget your password?";
             // 
             // panelForgotPassword
             // 
@@ -412,6 +416,29 @@
             this.panelSignup.TabIndex = 14;
             this.panelSignup.Visible = false;
             // 
+            // txtConfirmPasswordSignup
+            // 
+            this.txtConfirmPasswordSignup.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtConfirmPasswordSignup.BackColor = System.Drawing.SystemColors.Info;
+            this.txtConfirmPasswordSignup.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConfirmPasswordSignup.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPasswordSignup.Location = new System.Drawing.Point(259, 127);
+            this.txtConfirmPasswordSignup.Name = "txtConfirmPasswordSignup";
+            this.txtConfirmPasswordSignup.PasswordChar = '*';
+            this.txtConfirmPasswordSignup.Size = new System.Drawing.Size(343, 27);
+            this.txtConfirmPasswordSignup.TabIndex = 15;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(25, 125);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(231, 27);
+            this.label17.TabIndex = 14;
+            this.label17.Text = "Confirm password:";
+            // 
             // btnLoginSignupForm
             // 
             this.btnLoginSignupForm.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -522,28 +549,23 @@
             this.label16.TabIndex = 6;
             this.label16.Text = "Password:";
             // 
-            // label17
+            // panel1
             // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(25, 125);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(231, 27);
-            this.label17.TabIndex = 14;
-            this.label17.Text = "Confirm password:";
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1250, 1);
+            this.panel1.TabIndex = 3;
             // 
-            // txtConfirmPasswordSignup
+            // flowLayoutPanel1
             // 
-            this.txtConfirmPasswordSignup.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtConfirmPasswordSignup.BackColor = System.Drawing.SystemColors.Info;
-            this.txtConfirmPasswordSignup.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConfirmPasswordSignup.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPasswordSignup.Location = new System.Drawing.Point(259, 127);
-            this.txtConfirmPasswordSignup.Name = "txtConfirmPasswordSignup";
-            this.txtConfirmPasswordSignup.PasswordChar = '*';
-            this.txtConfirmPasswordSignup.Size = new System.Drawing.Size(343, 27);
-            this.txtConfirmPasswordSignup.TabIndex = 15;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Black;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1250, 1);
+            this.flowLayoutPanel1.TabIndex = 15;
             // 
             // LoginForm
             // 
@@ -613,6 +635,8 @@
         private System.Windows.Forms.TextBox txtUserIdSignup;
         private System.Windows.Forms.TextBox txtPasswordSignup;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 
