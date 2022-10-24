@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NormalLibrary.Utilities;
 
 namespace NormalLibrary
 {
@@ -45,8 +46,7 @@ namespace NormalLibrary
                         BookDescription = rdr["BookDescription"].ToString().Trim(),
                         BookFee = float.Parse(rdr["BookFee"].ToString().Trim()),
                         BookImage = rdr["BookImage"].ToString().Trim(),
-
-
+                        BookIsNew = int.Parse(rdr["BookIsNew"].ToString().Trim()),
                     };
                     list_book.Add(new_book);
                 }
@@ -54,6 +54,39 @@ namespace NormalLibrary
             }
             connecting.Close();
             return list_book;
+        }
+        public static List<BorrowedBook> GetBorrowedBookList (string sql)
+        {
+            SqlConnection connecting = CreateConnection();
+            connecting.Open();
+            SqlCommand command = new SqlCommand(sql, connecting);
+            List<BorrowedBook> list_borrowed_book = new List<BorrowedBook>();
+            using (var rdr = command.ExecuteReader())
+            {
+                while (rdr.Read())
+                {
+                    BorrowedBook new_borrowed_book = new BorrowedBook()
+                    {
+                        BookId = int.Parse(rdr["BookId"].ToString().Trim()),
+                        BookName = rdr["BookName"].ToString().Trim(),
+                        BookNumberOfPages = int.Parse(rdr["BookNumberOfPages"].ToString().Trim()),
+                        BookProductDate = rdr["BookProductDate"].ToString().Trim(),
+                        BookDescription = rdr["BookDescription"].ToString().Trim(),
+                        BookFee = float.Parse(rdr["BookFee"].ToString().Trim()),
+                        BookImage = rdr["BookImage"].ToString().Trim(),
+                        BorrowRecieptId = int.Parse(rdr["BorrowRecieptId"].ToString().Trim()),
+                        BorrowRecieptBorrowedDate = rdr["BorrowRecieptBorrowedDate"].ToString().Trim(),
+                        BorrowRecieptDeadline = rdr["BorrowRecieptDeadline"].ToString().Trim(),
+                        BorrowRecieptQuantity = int.Parse(rdr["BorrowRecieptQuantity"].ToString().Trim()),
+                        BorrowRecieptIsReturned = int.Parse(rdr["BorrowRecieptIsReturned"].ToString().Trim()),
+                    };
+                    list_borrowed_book.Add(new_borrowed_book);
+                }
+                rdr.Close();
+            }
+            connecting.Close();
+            return list_borrowed_book;
+
         }
         public static List<Genre> GetGenreList(string sql)
         {

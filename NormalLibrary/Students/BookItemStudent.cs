@@ -25,6 +25,8 @@ namespace NormalLibrary.Students
         private string _publisher;
         private string _genre;
         private string _image;
+        private double _price;
+        private int _isnew;
         [Category("Custom Props")]
         public int ID { get { return _id; } set { _id = value; } }
         [Category("Custom Props")]
@@ -42,7 +44,10 @@ namespace NormalLibrary.Students
         [Category("Custom Props")]
 
         public string IMAGE { get { return _image; } set { _image = value; pictureBoxBookItemStudent.ImageLocation = value; } }
-
+        [Category("Custom Props")]
+        public double PRICE { get { return _price; } set { _price = value; } }
+        [Category("Custom Props")]
+        public int ISNEW { get { return _isnew; } set { _isnew = value; } }
         #endregion
 
     }

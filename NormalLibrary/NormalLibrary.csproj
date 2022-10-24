@@ -58,8 +58,15 @@
     <Compile Include="Libarian\LibarianMain.Designer.cs">
       <DependentUpon>LibarianMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Students\BookBorrowedItemStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Students\BookBorrowedItemStudent.Designer.cs">
+      <DependentUpon>BookBorrowedItemStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\Author.cs" />
     <Compile Include="Utilities\Book.cs" />
+    <Compile Include="Utilities\BorrowedBook.cs" />
     <Compile Include="Utilities\DatabaseConnection.cs" />
     <Compile Include="Utilities\Genre.cs" />
     <Compile Include="LoginForm.cs">
@@ -127,6 +134,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Students\BookBorrowedItemStudent.resx">
+      <DependentUpon>BookBorrowedItemStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Students\BookItemStudent.resx">
       <DependentUpon>BookItemStudent.cs</DependentUpon>
     </EmbeddedResource>

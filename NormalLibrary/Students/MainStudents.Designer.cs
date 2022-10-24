@@ -54,15 +54,11 @@
             this.btnFilterAll = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.newBooksStudent1 = new NormalLibrary.Students.NewBooksStudent();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.bookselfStudent = new NormalLibrary.Students.BookselfStudent();
-            this.contactStudent = new NormalLibrary.Students.ContactStudent();
-            this.homeStudent = new NormalLibrary.Students.HomeStudent();
             this.panelFilter = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.btnFilterGenre = new System.Windows.Forms.Label();
@@ -73,6 +69,10 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.bookselfStudent = new NormalLibrary.Students.BookselfStudent();
+            this.contactStudent = new NormalLibrary.Students.ContactStudent();
+            this.homeStudent = new NormalLibrary.Students.HomeStudent();
+            this.newBooksStudent1 = new NormalLibrary.Students.NewBooksStudent();
             this.homeTop.SuspendLayout();
             this.panelBottom.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -398,14 +398,6 @@
             this.panel22.Size = new System.Drawing.Size(300, 686);
             this.panel22.TabIndex = 2;
             // 
-            // newBooksStudent1
-            // 
-            this.newBooksStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.newBooksStudent1.Location = new System.Drawing.Point(0, 0);
-            this.newBooksStudent1.Name = "newBooksStudent1";
-            this.newBooksStudent1.Size = new System.Drawing.Size(300, 686);
-            this.newBooksStudent1.TabIndex = 0;
-            // 
             // panel20
             // 
             this.panel20.BackColor = System.Drawing.Color.Black;
@@ -456,33 +448,6 @@
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(797, 686);
             this.panel21.TabIndex = 3;
-            // 
-            // bookselfStudent
-            // 
-            this.bookselfStudent.BackColor = System.Drawing.Color.Transparent;
-            this.bookselfStudent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bookselfStudent.Location = new System.Drawing.Point(0, 0);
-            this.bookselfStudent.Name = "bookselfStudent";
-            this.bookselfStudent.Size = new System.Drawing.Size(797, 686);
-            this.bookselfStudent.TabIndex = 2;
-            // 
-            // contactStudent
-            // 
-            this.contactStudent.BackColor = System.Drawing.Color.Transparent;
-            this.contactStudent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contactStudent.Location = new System.Drawing.Point(0, 0);
-            this.contactStudent.Name = "contactStudent";
-            this.contactStudent.Size = new System.Drawing.Size(797, 686);
-            this.contactStudent.TabIndex = 1;
-            // 
-            // homeStudent
-            // 
-            this.homeStudent.BackColor = System.Drawing.Color.Transparent;
-            this.homeStudent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.homeStudent.Location = new System.Drawing.Point(0, 0);
-            this.homeStudent.Name = "homeStudent";
-            this.homeStudent.Size = new System.Drawing.Size(797, 686);
-            this.homeStudent.TabIndex = 0;
             // 
             // panelFilter
             // 
@@ -593,6 +558,41 @@
             this.panel13.Size = new System.Drawing.Size(1, 720);
             this.panel13.TabIndex = 0;
             // 
+            // bookselfStudent
+            // 
+            this.bookselfStudent.BackColor = System.Drawing.Color.Transparent;
+            this.bookselfStudent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bookselfStudent.Location = new System.Drawing.Point(0, 0);
+            this.bookselfStudent.Name = "bookselfStudent";
+            this.bookselfStudent.Size = new System.Drawing.Size(797, 686);
+            this.bookselfStudent.TabIndex = 2;
+            // 
+            // contactStudent
+            // 
+            this.contactStudent.BackColor = System.Drawing.Color.Transparent;
+            this.contactStudent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contactStudent.Location = new System.Drawing.Point(0, 0);
+            this.contactStudent.Name = "contactStudent";
+            this.contactStudent.Size = new System.Drawing.Size(797, 686);
+            this.contactStudent.TabIndex = 1;
+            // 
+            // homeStudent
+            // 
+            this.homeStudent.BackColor = System.Drawing.Color.Transparent;
+            this.homeStudent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.homeStudent.Location = new System.Drawing.Point(0, 0);
+            this.homeStudent.Name = "homeStudent";
+            this.homeStudent.Size = new System.Drawing.Size(797, 686);
+            this.homeStudent.TabIndex = 0;
+            // 
+            // newBooksStudent1
+            // 
+            this.newBooksStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newBooksStudent1.Location = new System.Drawing.Point(0, 0);
+            this.newBooksStudent1.Name = "newBooksStudent1";
+            this.newBooksStudent1.Size = new System.Drawing.Size(300, 686);
+            this.newBooksStudent1.TabIndex = 0;
+            // 
             // MainStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -609,6 +609,7 @@
             this.Name = "MainStudents";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeStudents";
+            this.Load += new System.EventHandler(this.MainStudents_Load);
             this.homeTop.ResumeLayout(false);
             this.homeTop.PerformLayout();
             this.panelBottom.ResumeLayout(false);

@@ -28,19 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
+            // 
+            // flowLayoutPanel
+            // 
+            this.flowLayoutPanel.AutoScroll = true;
+            this.flowLayoutPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.flowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel.Name = "flowLayoutPanel";
+            this.flowLayoutPanel.Size = new System.Drawing.Size(797, 686);
+            this.flowLayoutPanel.TabIndex = 1;
+            this.flowLayoutPanel.SizeChanged += new System.EventHandler(this.flowLayoutPanel_SizeChanged);
             // 
             // HomeStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
+            this.Controls.Add(this.flowLayoutPanel);
             this.Name = "HomeStudent";
             this.Size = new System.Drawing.Size(797, 686);
+            this.Load += new System.EventHandler(this.HomeStudent_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
     }
 }
