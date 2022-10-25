@@ -165,5 +165,13 @@ namespace NormalLibrary.Students
             contactStudent.Visible = true;
             homeStudent.Visible = false;
         }
+
+        private void MainStudents_Load(object sender, EventArgs e)
+        {
+            panelFilter.Visible = true;
+            bookselfStudent.Visible = false;
+            contactStudent.Visible = false;
+            homeStudent.Visible = true;
+        }
     }
 }
