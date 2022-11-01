@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NormalLibrary.Libarian
+namespace NormalLibrary
 {
-    public partial class LibarianMain : Form
+    public partial class BookItemDetailStudent : Form
     {
         private int screenSize = 0;
         private const int WM_NCLBUTTONDOWN = 0xA1;
@@ -19,14 +19,17 @@ namespace NormalLibrary.Libarian
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
-        public LibarianMain()
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        public BookItemDetailStudent()
         {
             InitializeComponent();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void btnResize_Click(object sender, EventArgs e)
@@ -53,15 +56,15 @@ namespace NormalLibrary.Libarian
         {
             if (e.Button == MouseButtons.Left)
             {
-                LibarianMain.ReleaseCapture();
-                LibarianMain.SendMessage(Handle, LibarianMain.WM_NCLBUTTONDOWN, LibarianMain.HT_CAPTION, 0);
+                BookItemDetailStudent.ReleaseCapture();
+                BookItemDetailStudent.SendMessage(Handle, BookItemDetailStudent.WM_NCLBUTTONDOWN, BookItemDetailStudent.HT_CAPTION, 0);
             }
         }
 
-        private void LibarianMain_Load(object sender, EventArgs e)
+        private void FormTemplate_Load(object sender, EventArgs e)
         {
-            dgvLibrary.DataSource = DatabaseConnection.GetDataTable("SELECT Book.BookId, Book.BookName, Book.BookNumberOfPages, Book.BookProductDate, Book.BookNumberOfCopies,Book.BookFee,Book.BookIsNew,Genre.GenreName,Author.AuthorName FROM Book JOIN BookHasGenre ON Book.BookId = BookHasGenre.BookId JOIN Genre ON Genre.GenreId = BookHasGenre.GenreId JOIN AuthorHasBooks  ON Book.BookId = AuthorHasBooks.BookId JOIN Author  ON Author.AuthorId = AuthorHasBooks.AuthorId");
-
+            screenSize = 0;
+            this.WindowState = FormWindowState.Normal;
         }
     }
 }

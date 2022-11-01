@@ -31,14 +31,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBoxBookItemStudent = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelPrice = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelGenre = new System.Windows.Forms.Label();
+            this.labelPublisher = new System.Windows.Forms.Label();
+            this.labelAuthor = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.labelName = new System.Windows.Forms.Label();
-            this.labelAuthor = new System.Windows.Forms.Label();
-            this.labelPublisher = new System.Windows.Forms.Label();
-            this.labelGenre = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookItemStudent)).BeginInit();
             this.panel2.SuspendLayout();
@@ -53,6 +55,9 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(107, 145);
             this.panel1.TabIndex = 0;
+            this.panel1.Click += new System.EventHandler(this.panel2_Click);
+            this.panel1.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
+            this.panel1.MouseHover += new System.EventHandler(this.panel2_MouseHover);
             // 
             // pictureBoxBookItemStudent
             // 
@@ -64,10 +69,15 @@
             this.pictureBoxBookItemStudent.Size = new System.Drawing.Size(98, 136);
             this.pictureBoxBookItemStudent.TabIndex = 0;
             this.pictureBoxBookItemStudent.TabStop = false;
+            this.pictureBoxBookItemStudent.Click += new System.EventHandler(this.panel2_Click);
+            this.pictureBoxBookItemStudent.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
+            this.pictureBoxBookItemStudent.MouseHover += new System.EventHandler(this.panel2_MouseHover);
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.labelPrice);
+            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.labelGenre);
             this.panel2.Controls.Add(this.labelPublisher);
             this.panel2.Controls.Add(this.labelAuthor);
@@ -81,86 +91,139 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(680, 145);
             this.panel2.TabIndex = 1;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            this.panel2.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
+            this.panel2.MouseHover += new System.EventHandler(this.panel2_MouseHover);
             // 
-            // label1
+            // labelPrice
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 24);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Tittle:";
+            this.labelPrice.AutoSize = true;
+            this.labelPrice.Font = new System.Drawing.Font("Lucida Handwriting", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrice.Location = new System.Drawing.Point(145, 107);
+            this.labelPrice.Name = "labelPrice";
+            this.labelPrice.Size = new System.Drawing.Size(60, 21);
+            this.labelPrice.TabIndex = 17;
+            this.labelPrice.Text = "Price:";
+            this.labelPrice.Click += new System.EventHandler(this.panel2_Click);
+            this.labelPrice.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
+            this.labelPrice.MouseHover += new System.EventHandler(this.panel2_MouseHover);
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 24);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Author:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 73);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 24);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Publisher:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 107);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 24);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Genre:";
-            // 
-            // labelName
-            // 
-            this.labelName.AutoSize = true;
-            this.labelName.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(145, 3);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(72, 24);
-            this.labelName.TabIndex = 12;
-            this.labelName.Text = "Tittle:";
-            // 
-            // labelAuthor
-            // 
-            this.labelAuthor.AutoSize = true;
-            this.labelAuthor.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAuthor.Location = new System.Drawing.Point(145, 37);
-            this.labelAuthor.Name = "labelAuthor";
-            this.labelAuthor.Size = new System.Drawing.Size(90, 24);
-            this.labelAuthor.TabIndex = 13;
-            this.labelAuthor.Text = "Author:";
-            // 
-            // labelPublisher
-            // 
-            this.labelPublisher.AutoSize = true;
-            this.labelPublisher.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPublisher.Location = new System.Drawing.Point(145, 73);
-            this.labelPublisher.Name = "labelPublisher";
-            this.labelPublisher.Size = new System.Drawing.Size(115, 24);
-            this.labelPublisher.TabIndex = 14;
-            this.labelPublisher.Text = "Publisher:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Lucida Handwriting", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 106);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 21);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Price:";
+            this.label5.Click += new System.EventHandler(this.panel2_Click);
+            this.label5.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
+            this.label5.MouseHover += new System.EventHandler(this.panel2_MouseHover);
             // 
             // labelGenre
             // 
             this.labelGenre.AutoSize = true;
-            this.labelGenre.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGenre.Location = new System.Drawing.Point(145, 107);
+            this.labelGenre.Font = new System.Drawing.Font("Lucida Handwriting", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGenre.Location = new System.Drawing.Point(145, 81);
             this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(77, 24);
+            this.labelGenre.Size = new System.Drawing.Size(66, 21);
             this.labelGenre.TabIndex = 15;
             this.labelGenre.Text = "Genre:";
+            this.labelGenre.Click += new System.EventHandler(this.panel2_Click);
+            this.labelGenre.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
+            this.labelGenre.MouseHover += new System.EventHandler(this.panel2_MouseHover);
+            // 
+            // labelPublisher
+            // 
+            this.labelPublisher.AutoSize = true;
+            this.labelPublisher.Font = new System.Drawing.Font("Lucida Handwriting", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPublisher.Location = new System.Drawing.Point(145, 57);
+            this.labelPublisher.Name = "labelPublisher";
+            this.labelPublisher.Size = new System.Drawing.Size(101, 21);
+            this.labelPublisher.TabIndex = 14;
+            this.labelPublisher.Text = "Publisher:";
+            this.labelPublisher.Click += new System.EventHandler(this.panel2_Click);
+            this.labelPublisher.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
+            this.labelPublisher.MouseHover += new System.EventHandler(this.panel2_MouseHover);
+            // 
+            // labelAuthor
+            // 
+            this.labelAuthor.AutoSize = true;
+            this.labelAuthor.Font = new System.Drawing.Font("Lucida Handwriting", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAuthor.Location = new System.Drawing.Point(145, 33);
+            this.labelAuthor.Name = "labelAuthor";
+            this.labelAuthor.Size = new System.Drawing.Size(79, 21);
+            this.labelAuthor.TabIndex = 13;
+            this.labelAuthor.Text = "Author:";
+            this.labelAuthor.Click += new System.EventHandler(this.panel2_Click);
+            this.labelAuthor.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
+            this.labelAuthor.MouseHover += new System.EventHandler(this.panel2_MouseHover);
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Lucida Handwriting", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Location = new System.Drawing.Point(145, 11);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(63, 21);
+            this.labelName.TabIndex = 12;
+            this.labelName.Text = "Tittle:";
+            this.labelName.Click += new System.EventHandler(this.panel2_Click);
+            this.labelName.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
+            this.labelName.MouseHover += new System.EventHandler(this.panel2_MouseHover);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Handwriting", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 21);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Tittle:";
+            this.label1.Click += new System.EventHandler(this.panel2_Click);
+            this.label1.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
+            this.label1.MouseHover += new System.EventHandler(this.panel2_MouseHover);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Handwriting", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 21);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Author:";
+            this.label2.Click += new System.EventHandler(this.panel2_Click);
+            this.label2.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
+            this.label2.MouseHover += new System.EventHandler(this.panel2_MouseHover);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Lucida Handwriting", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(5, 57);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 21);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Publisher:";
+            this.label3.Click += new System.EventHandler(this.panel2_Click);
+            this.label3.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
+            this.label3.MouseHover += new System.EventHandler(this.panel2_MouseHover);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Lucida Handwriting", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 81);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 21);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Genre:";
+            this.label4.Click += new System.EventHandler(this.panel2_Click);
+            this.label4.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
+            this.label4.MouseHover += new System.EventHandler(this.panel2_MouseHover);
             // 
             // BookItemStudent
             // 
@@ -192,5 +255,7 @@
         private System.Windows.Forms.Label labelPublisher;
         private System.Windows.Forms.Label labelAuthor;
         private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelPrice;
+        private System.Windows.Forms.Label label5;
     }
 }

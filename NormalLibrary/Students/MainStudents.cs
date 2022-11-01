@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,10 +13,19 @@ namespace NormalLibrary.Students
 {
     public partial class MainStudents : Form
     {
+        private int screenSize = 0;
+        private const int WM_NCLBUTTONDOWN = 0xA1;
+        private const int HT_CAPTION = 0x2;
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+        public static String search_tab = "ALL";
+        public static String search_bar = "";
         public MainStudents()
         {
             InitializeComponent();
-            if (Program.screenSize == 1)
+            if (screenSize == 1)
             {
                 this.WindowState = FormWindowState.Maximized;
             }
@@ -32,15 +42,15 @@ namespace NormalLibrary.Students
 
         private void btnResize_Click(object sender, EventArgs e)
         {
-            if (Program.screenSize == 0)
+            if (screenSize == 0)
             {
-                Program.screenSize = 1;
+                screenSize = 1;
                 this.WindowState = FormWindowState.Maximized;
 
             }
             else
             {
-                Program.screenSize = 0;
+                screenSize = 0;
                 this.WindowState = FormWindowState.Normal;
             }
         }
@@ -54,8 +64,8 @@ namespace NormalLibrary.Students
         {
             if (e.Button == MouseButtons.Left)
             {
-                Program.ReleaseCapture();
-                Program.SendMessage(Handle, Program.WM_NCLBUTTONDOWN, Program.HT_CAPTION, 0);
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
 
@@ -147,6 +157,12 @@ namespace NormalLibrary.Students
             bookselfStudent.Visible = false;
             contactStudent.Visible = false;
             homeStudent.Visible = true;
+            search_bar = "";
+            search_tab = "ALL";
+            btnFilterAll.ForeColor = Color.Firebrick;
+            btnFilterAuthor.ForeColor = Color.Black;
+            btnFilterGenre.ForeColor = Color.Black;
+            homeStudent.HomeStudent_Load(sender, e);
         }
 
         private void btnBookself_Click(object sender, EventArgs e)
@@ -155,7 +171,12 @@ namespace NormalLibrary.Students
             bookselfStudent.Visible = true;
             contactStudent.Visible = false;
             homeStudent.Visible = false;
-            
+            search_bar = "";
+            search_tab = "ALL";
+            btnFilterAll.ForeColor = Color.Firebrick;
+            btnFilterAuthor.ForeColor = Color.Black;
+            btnFilterGenre.ForeColor = Color.Black;
+            bookselfStudent.BookselfStudent_Load(sender, e);
         }
 
         private void btnContact_Click(object sender, EventArgs e)
@@ -164,14 +185,122 @@ namespace NormalLibrary.Students
             bookselfStudent.Visible = false;
             contactStudent.Visible = true;
             homeStudent.Visible = false;
+            search_bar = "";
+            search_tab = "ALL";
+            btnFilterAll.ForeColor = Color.Black;
+            btnFilterAuthor.ForeColor = Color.Black;
+            btnFilterGenre.ForeColor = Color.Black;
         }
 
         private void MainStudents_Load(object sender, EventArgs e)
         {
+            search_bar = "";
+            search_tab = "ALL";
+            btnFilterAll.ForeColor = Color.Firebrick;
+            btnFilterAuthor.ForeColor = Color.Black;
+            btnFilterGenre.ForeColor = Color.Black;
             panelFilter.Visible = true;
             bookselfStudent.Visible = false;
             contactStudent.Visible = false;
             homeStudent.Visible = true;
+            homeStudent.HomeStudent_Load(sender, e);
+        }
+
+        private void btnFilterAll_Click(object sender, EventArgs e)
+        {
+            search_tab = "ALL";
+            btnFilterAll.ForeColor = Color.Firebrick;
+            btnFilterAuthor.ForeColor = Color.Black;
+            btnFilterGenre.ForeColor = Color.Black;
+            if (homeStudent.Visible == true) {
+                homeStudent.HomeStudent_Load(sender, e);
+            } else if (bookselfStudent.Visible == true) {
+                bookselfStudent.BookselfStudent_Load(sender, e);
+            }
+            else
+            {
+                search_tab = "ALL";
+                search_bar = "";
+                btnFilterAll.ForeColor = Color.Black;
+                btnFilterAuthor.ForeColor = Color.Black;
+                btnFilterGenre.ForeColor = Color.Black;
+            }
+
+        }
+
+        private void btnFilterAuthor_Click(object sender, EventArgs e)
+        {
+            search_tab = "AUTHOR";
+            btnFilterAll.ForeColor = Color.Black;
+            btnFilterAuthor.ForeColor = Color.Firebrick;
+            btnFilterGenre.ForeColor = Color.Black;
+            if (homeStudent.Visible == true)
+            {
+                homeStudent.HomeStudent_Load(sender, e);
+            }
+            else if (bookselfStudent.Visible == true)
+            {
+                bookselfStudent.BookselfStudent_Load(sender, e);
+            }
+            else
+            {
+                search_tab = "ALL";
+                search_bar = "";
+                btnFilterAll.ForeColor = Color.Black;
+                btnFilterAuthor.ForeColor = Color.Black;
+                btnFilterGenre.ForeColor = Color.Black;
+            }
+        }
+
+        private void btnFilterGenre_Click(object sender, EventArgs e)
+        {
+            search_tab = "GENRE";
+            btnFilterAll.ForeColor = Color.Black;
+            btnFilterAuthor.ForeColor = Color.Black;
+            btnFilterGenre.ForeColor = Color.Firebrick;
+            if (homeStudent.Visible == true)
+            {
+                homeStudent.HomeStudent_Load(sender, e);
+            }
+            else if (bookselfStudent.Visible == true)
+            {
+                bookselfStudent.BookselfStudent_Load(sender, e);
+            }
+            else
+            {
+                search_tab = "ALL";
+                search_bar = "";
+                btnFilterAll.ForeColor = Color.Black;
+                btnFilterAuthor.ForeColor = Color.Black;
+                btnFilterGenre.ForeColor = Color.Black;
+            }
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            search_bar = txtStudentHomeSearchBox.Text;
+            if (homeStudent.Visible == true)
+            {
+                homeStudent.HomeStudent_Load(sender, e);
+            }
+            else if (bookselfStudent.Visible == true)
+            {
+                bookselfStudent.BookselfStudent_Load(sender, e);
+            }
+            else
+            {
+                search_tab = "ALL";
+                search_bar = "";
+                btnFilterAll.ForeColor = Color.Black;
+                btnFilterAuthor.ForeColor = Color.Black;
+                btnFilterGenre.ForeColor = Color.Black;
+            }
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            ProfileStudent new_form = new ProfileStudent();
+            new_form.Show();
         }
     }
 }
