@@ -52,17 +52,35 @@
     <Compile Include="Admin\AdminMain.Designer.cs">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTemplate.Designer.cs">
+      <DependentUpon>FormTemplate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Libarian\LibarianMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Libarian\LibarianMain.Designer.cs">
       <DependentUpon>LibarianMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Students\BookBorrowedItemDetailStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\BookBorrowedItemDetailStudent.Designer.cs">
+      <DependentUpon>BookBorrowedItemDetailStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Students\BookBorrowedItemStudent.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Students\BookBorrowedItemStudent.Designer.cs">
       <DependentUpon>BookBorrowedItemStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\BookItemDetailStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\BookItemDetailStudent.Designer.cs">
+      <DependentUpon>BookItemDetailStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\Author.cs" />
     <Compile Include="Utilities\Book.cs" />
@@ -122,6 +140,15 @@
     </Compile>
     <Compile Include="Utilities\User.cs" />
     <Compile Include="Utilities\UserProfile.cs" />
+    <EmbeddedResource Include="Admin\AdminMain.resx">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTemplate.resx">
+      <DependentUpon>FormTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libarian\LibarianMain.resx">
+      <DependentUpon>LibarianMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,8 +161,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Students\BookBorrowedItemDetailStudent.resx">
+      <DependentUpon>BookBorrowedItemDetailStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Students\BookBorrowedItemStudent.resx">
       <DependentUpon>BookBorrowedItemStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\BookItemDetailStudent.resx">
+      <DependentUpon>BookItemDetailStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Students\BookItemStudent.resx">
       <DependentUpon>BookItemStudent.cs</DependentUpon>

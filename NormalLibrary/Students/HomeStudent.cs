@@ -18,9 +18,20 @@ namespace NormalLibrary.Students
             InitializeComponent();
         }
 
-        private void HomeStudent_Load(object sender, EventArgs e)
+        public void HomeStudent_Load(object sender, EventArgs e)
         {
+            flowLayoutPanel.Controls.Clear();
             list_book = DatabaseConnection.GetBookList("SELECT * FROM Book");
+            List<Book> new_books = new List<Book>();
+            foreach (Book book in list_book)
+            {
+                if(book.BookIsNew == 1)
+                {
+                    new_books.Add(book);
+                    list_book.Remove(book);
+                }
+            }
+            list_book.InsertRange(0, new_books);
             BookItemStudent[] list_book_items = new BookItemStudent[list_book.Count];
             for (int i = 0; i < list_book.Count; i++)
             {
@@ -49,15 +60,25 @@ namespace NormalLibrary.Students
                 }
                 list_book_items[i].NAME = list_book[i].BookName;
                 list_book_items[i].ID = list_book[i].BookId;
-                list_book_items[i].DESCRIPTION = list_book[i].BookDescription;
                 list_book_items[i].AUTHOR = new_author;
                 list_book_items[i].PUBLISHER = new_publisher;
                 list_book_items[i].GENRE = new_genre;
                 list_book_items[i].IMAGE = list_book[i].BookImage;
                 list_book_items[i].ISNEW = list_book[i].BookId;
-                list_book_items[i].PRICE = list_book[i].BookFee;
+                list_book_items[i].PRICE = list_book[i].BookFee;     
+            }
+            List<BookItemStudent> search_list_book_items = new List<BookItemStudent>();
 
-                flowLayoutPanel.Controls.Add(list_book_items[i]);
+            for (int i = 0; i < list_book_items.Count(); i++)
+            {
+                if (list_book_items[i].IsContain(MainStudents.search_bar, MainStudents.search_tab))
+                {
+                    search_list_book_items.Add(list_book_items[i]);
+                }
+            }
+            for (int i = 0; i < search_list_book_items.Count; i++)
+            {
+                flowLayoutPanel.Controls.Add(search_list_book_items[i]);
             }
         }
 
@@ -70,5 +91,29 @@ namespace NormalLibrary.Students
             }
             flowLayoutPanel.ResumeLayout();
         }
+
+        private void InitializeComponent()
+        {
+            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.SuspendLayout();
+            // 
+            // flowLayoutPanel
+            // 
+            this.flowLayoutPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.flowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel.Name = "flowLayoutPanel";
+            this.flowLayoutPanel.Size = new System.Drawing.Size(797, 686);
+            this.flowLayoutPanel.TabIndex = 0;
+            // 
+            // HomeStudent
+            // 
+            this.Controls.Add(this.flowLayoutPanel);
+            this.Name = "HomeStudent";
+            this.Size = new System.Drawing.Size(797, 686);
+            this.ResumeLayout(false);
+
+        }
+
     }
 }

@@ -181,6 +181,32 @@ namespace NormalLibrary
             connecting.Close();
             return list_user;
         }
+        public static Book GetBook(string sql) { 
+            SqlConnection connecting = CreateConnection();
+            connecting.Open();
+            SqlCommand command = new SqlCommand(sql,connecting);
+            Book new_book = new Book();
+            using (var rdr = command.ExecuteReader()) {
+                while (rdr.Read()) {
+                    Book book = new Book()
+                    {
+                        BookId = int.Parse(rdr["BookId"].ToString().Trim()),
+                        BookName = rdr["BookName"].ToString().Trim(),
+                        BookNumberOfPages = int.Parse(rdr["BookNumberOfPages"].ToString().Trim()),
+                        BookProductDate = rdr["BookProductDate"].ToString().Trim(),
+                        BookNumberOfCopies = int.Parse(rdr["BookNumberOfCopies"].ToString().Trim()),
+                        BookDescription = rdr["BookDescription"].ToString().Trim(),
+                        BookFee = float.Parse(rdr["BookFee"].ToString().Trim()),
+                        BookImage = rdr["BookImage"].ToString().Trim(),
+                        BookIsNew = int.Parse(rdr["BookIsNew"].ToString().Trim()),
+                    };
+                    new_book = book;
+                }
+                rdr.Close();
+            }
+            connecting.Close();
+            return new_book;
+        }
         public static UserProfile GetUserProfile(string sql)
         {
             SqlConnection connecting = CreateConnection();
@@ -243,6 +269,65 @@ namespace NormalLibrary
                 return false;
             }
         }
+        public static bool CheckIfUserHasBorrowRecieptIsAskingForCheck(int id) {
+            SqlConnection connecting = CreateConnection();
+            connecting.Open();
+            string sql = "SELECT * FROM UserHasBorrowReciept WHERE BorrowRecieptId = " + id + ";";
+            SqlCommand new_command = new SqlCommand(sql, connecting);
+            int tmp = 0;
+            using (var rdr = new_command.ExecuteReader())
+            {
+                while (rdr.Read())
+                {
+                    tmp = Int32.Parse(rdr["UserHasBorrowRecieptIsAskingForCheck"].ToString().Trim());
+                }
+                rdr.Close();
+            }
+            connecting.Close();
+            if(tmp == 0)
+            {
+                return false;
+            }
+            return true;
+        }
+        public static int GetNumberOfBorrowedCopies (int id)
+        {
+            SqlConnection connecting = CreateConnection();
+            connecting.Open();
+            string sql = "SELECT * FROM BorrowReciept WHERE BookId = " + id + "; ";
+            SqlCommand command = new SqlCommand(sql, connecting);
+            int total_copies = 0;
+            using (var rdr = command.ExecuteReader())
+            {
+                while (rdr.Read())
+                {
+                    total_copies = total_copies + int.Parse(rdr["BorrowRecieptQuantity"].ToString().Trim());
+                }
+                rdr.Close();
+            }
+            connecting.Close();
+            return total_copies;
+
+        }
+        public static int GetBorrowedRecieptId(int id)
+        {
+            SqlConnection connecting = CreateConnection();
+            connecting.Open();
+            string sql = "SELECT * FROM BorrowReciept WHERE UserId = " + id + "; ";
+            SqlCommand command = new SqlCommand(sql, connecting);
+            int reciept_id = 0;
+            using (var rdr = command.ExecuteReader())
+            {
+                while (rdr.Read())
+                {
+                    reciept_id = int.Parse(rdr["BorrowRecieptId"].ToString().Trim());
+                }
+                rdr.Close();
+            }
+            connecting.Close();
+            return reciept_id;
+
+        }
         public static void CreateCommand(string sql)
         {
             SqlConnection connecting = CreateConnection();
@@ -252,5 +337,6 @@ namespace NormalLibrary
             connecting.Close();
             command.Dispose();
         }
+
     }
 }

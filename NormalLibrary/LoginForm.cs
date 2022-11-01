@@ -13,10 +13,17 @@ namespace NormalLibrary
 {
     public partial class LoginForm : Form
     {
+        public static int screenSize = 0;
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
         public LoginForm()
         {
             InitializeComponent();
-            if (Program.screenSize == 1)
+            if (screenSize == 1)
             {
                 this.WindowState = FormWindowState.Maximized;
             }
@@ -33,15 +40,15 @@ namespace NormalLibrary
 
         private void btnResize_Click(object sender, EventArgs e)
         {
-            if (Program.screenSize == 0)
+            if (screenSize == 0)
             {
-                Program.screenSize = 1;
+                screenSize = 1;
                 this.WindowState = FormWindowState.Maximized;
                 
             }
             else
             {
-                Program.screenSize = 0;
+                screenSize = 0;
                 this.WindowState = FormWindowState.Normal;
             }
         }
@@ -55,8 +62,8 @@ namespace NormalLibrary
         {
             if (e.Button == MouseButtons.Left)
             {
-               Program.ReleaseCapture();
-               Program.SendMessage(Handle, Program.WM_NCLBUTTONDOWN, Program.HT_CAPTION, 0);
+               ReleaseCapture();
+               SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
 

@@ -65,7 +65,7 @@
             this.btnFilterAuthor = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtStudentHomeSearchBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonSearch = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -254,6 +254,7 @@
             this.btnProfile.Size = new System.Drawing.Size(89, 27);
             this.btnProfile.TabIndex = 1;
             this.btnProfile.Text = "Profile";
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             this.btnProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             this.btnProfile.MouseHover += new System.EventHandler(this.btnProfile_MouseHover);
             // 
@@ -374,6 +375,7 @@
             this.btnFilterAll.Size = new System.Drawing.Size(46, 27);
             this.btnFilterAll.TabIndex = 1;
             this.btnFilterAll.Text = "All";
+            this.btnFilterAll.Click += new System.EventHandler(this.btnFilterAll_Click);
             this.btnFilterAll.MouseLeave += new System.EventHandler(this.btnFilterAll_MouseLeave);
             this.btnFilterAll.MouseHover += new System.EventHandler(this.btnFilterAll_MouseHover);
             // 
@@ -481,6 +483,7 @@
             this.btnFilterGenre.Size = new System.Drawing.Size(79, 27);
             this.btnFilterGenre.TabIndex = 4;
             this.btnFilterGenre.Text = "Genre";
+            this.btnFilterGenre.Click += new System.EventHandler(this.btnFilterGenre_Click);
             this.btnFilterGenre.MouseLeave += new System.EventHandler(this.btnFilterGenre_MouseLeave);
             this.btnFilterGenre.MouseHover += new System.EventHandler(this.btnFilterGenre_MouseHover);
             // 
@@ -494,13 +497,14 @@
             this.btnFilterAuthor.Size = new System.Drawing.Size(94, 27);
             this.btnFilterAuthor.TabIndex = 2;
             this.btnFilterAuthor.Text = "Author";
+            this.btnFilterAuthor.Click += new System.EventHandler(this.btnFilterAuthor_Click);
             this.btnFilterAuthor.MouseLeave += new System.EventHandler(this.btnFilterAuthor_MouseLeave);
             this.btnFilterAuthor.MouseHover += new System.EventHandler(this.btnFilterAuthor_MouseHover);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.txtStudentHomeSearchBox);
-            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Controls.Add(this.buttonSearch);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -517,19 +521,20 @@
             this.txtStudentHomeSearchBox.Size = new System.Drawing.Size(231, 27);
             this.txtStudentHomeSearchBox.TabIndex = 1;
             // 
-            // button1
+            // buttonSearch
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(240, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 27);
-            this.button1.TabIndex = 13;
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonSearch.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.buttonSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSearch.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.buttonSearch.FlatAppearance.BorderSize = 0;
+            this.buttonSearch.Location = new System.Drawing.Point(240, 3);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(24, 27);
+            this.buttonSearch.TabIndex = 13;
+            this.buttonSearch.UseVisualStyleBackColor = false;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // panel16
             // 
@@ -674,7 +679,7 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Label btnHome;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel19;
