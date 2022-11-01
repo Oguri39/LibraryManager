@@ -22,16 +22,21 @@ namespace NormalLibrary.Students
         {
             flowLayoutPanel.Controls.Clear();
             list_book = DatabaseConnection.GetBookList("SELECT * FROM Book");
-            List<Book> new_books = new List<Book>();
-            foreach (Book book in list_book)
-            {
-                if(book.BookIsNew == 1)
+            List<Book> first_part = new List<Book>();
+            List<Book> second_part = new List<Book>();
+
+            for (int i = 0; i < list_book.Count; i++) {
+                if (list_book[i].BookIsNew == 1)
                 {
-                    new_books.Add(book);
-                    list_book.Remove(book);
+                    first_part.Add(list_book[i]);
+                }
+                else { 
+                    second_part.Add(list_book[i]);
                 }
             }
-            list_book.InsertRange(0, new_books);
+            list_book.Clear();
+            list_book.InsertRange(0, second_part);
+            list_book.InsertRange(0, first_part);
             BookItemStudent[] list_book_items = new BookItemStudent[list_book.Count];
             for (int i = 0; i < list_book.Count; i++)
             {
@@ -64,7 +69,7 @@ namespace NormalLibrary.Students
                 list_book_items[i].PUBLISHER = new_publisher;
                 list_book_items[i].GENRE = new_genre;
                 list_book_items[i].IMAGE = list_book[i].BookImage;
-                list_book_items[i].ISNEW = list_book[i].BookId;
+                list_book_items[i].ISNEW = list_book[i].BookIsNew;
                 list_book_items[i].PRICE = list_book[i].BookFee;     
             }
             List<BookItemStudent> search_list_book_items = new List<BookItemStudent>();
@@ -99,6 +104,7 @@ namespace NormalLibrary.Students
             // 
             // flowLayoutPanel
             // 
+            this.flowLayoutPanel.AutoScroll = true;
             this.flowLayoutPanel.BackColor = System.Drawing.Color.Gainsboro;
             this.flowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel.Location = new System.Drawing.Point(0, 0);

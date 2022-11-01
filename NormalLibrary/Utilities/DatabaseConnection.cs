@@ -11,7 +11,7 @@ namespace NormalLibrary
 {
     internal class DatabaseConnection
     {
-        private static readonly string link = @"Data Source=DESKTOP-BAMD39I\SQLEXPRESS;Initial Catalog=Library;Integrated Security=True";
+        private static readonly string link = @"Data Source=DESKTOP-3239J5Q\DTT;Initial Catalog=Library;Integrated Security=True";
         private static SqlConnection CreateConnection()
         {
             return new SqlConnection(link);
