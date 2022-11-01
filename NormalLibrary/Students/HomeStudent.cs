@@ -17,7 +17,7 @@ namespace NormalLibrary.Students
         {
             InitializeComponent();
         }
-
+        //jadhjdjadhasjdh
         public void HomeStudent_Load(object sender, EventArgs e)
         {
             flowLayoutPanel.Controls.Clear();
