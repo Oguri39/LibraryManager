@@ -63,5 +63,10 @@ namespace NormalLibrary.Libarian
             dgvLibrary.DataSource = DatabaseConnection.GetDataTable("SELECT Book.BookId, Book.BookName, Book.BookNumberOfPages, Book.BookProductDate, Book.BookNumberOfCopies,Book.BookFee,Book.BookIsNew,Genre.GenreName,Author.AuthorName FROM Book JOIN BookHasGenre ON Book.BookId = BookHasGenre.BookId JOIN Genre ON Genre.GenreId = BookHasGenre.GenreId JOIN AuthorHasBooks  ON Book.BookId = AuthorHasBooks.BookId JOIN Author  ON Author.AuthorId = AuthorHasBooks.AuthorId");
 
         }
+
+        private void dgvLibrary_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

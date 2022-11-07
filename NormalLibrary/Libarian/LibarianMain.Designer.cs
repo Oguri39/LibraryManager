@@ -56,6 +56,22 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.tabGenreAuthor = new System.Windows.Forms.TabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabAuthor = new System.Windows.Forms.TabPage();
+            this.dgvAuthor = new System.Windows.Forms.DataGridView();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tabGenre = new System.Windows.Forms.TabPage();
+            this.dgvGenre = new System.Windows.Forms.DataGridView();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.tabManager = new System.Windows.Forms.TabPage();
@@ -97,6 +113,8 @@
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.panelBottom.SuspendLayout();
             this.windowTop.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -111,10 +129,18 @@
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tabGenreAuthor.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.tabAuthor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAuthor)).BeginInit();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.tabGenre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGenre)).BeginInit();
+            this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.tabManager.SuspendLayout();
             this.panel13.SuspendLayout();
-            this.panel18.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -129,6 +155,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.panel12.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBottom
@@ -332,6 +360,7 @@
             this.dgvLibrary.Name = "dgvLibrary";
             this.dgvLibrary.Size = new System.Drawing.Size(1230, 607);
             this.dgvLibrary.TabIndex = 1;
+            this.dgvLibrary.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibrary_CellContentClick);
             // 
             // tabPublisher
             // 
@@ -411,6 +440,12 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1230, 43);
             this.panel5.TabIndex = 0;
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1230, 43);
+            this.panel5.TabIndex = 0;
             // 
             // label2
             // 
@@ -421,6 +456,37 @@
             this.label2.Size = new System.Drawing.Size(248, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Publisher control";
+            // 
+            // tabAuthor
+            // 
+            this.tabAuthor.Controls.Add(this.dgvAuthor);
+            this.tabAuthor.Controls.Add(this.panel8);
+            this.tabAuthor.Controls.Add(this.panel9);
+            this.tabAuthor.Font = new System.Drawing.Font("Lucida Handwriting", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabAuthor.Location = new System.Drawing.Point(4, 22);
+            this.tabAuthor.Name = "tabAuthor";
+            this.tabAuthor.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAuthor.Size = new System.Drawing.Size(1236, 613);
+            this.tabAuthor.TabIndex = 2;
+            this.tabAuthor.Text = "Author";
+            this.tabAuthor.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // dgvAuthor
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Handwriting", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(5, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(248, 31);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Publisher control";
+            this.dgvAuthor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAuthor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvAuthor.Location = new System.Drawing.Point(3, 46);
+            this.dgvAuthor.Name = "dgvAuthor";
+            this.dgvAuthor.Size = new System.Drawing.Size(1230, 532);
+            this.dgvAuthor.TabIndex = 10;
             // 
             // tabGenreAuthor
             // 
@@ -680,6 +746,7 @@
             this.panel22.TabIndex = 2;
             // 
             // panel23
+            // tabGenre
             // 
             this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel23.Location = new System.Drawing.Point(600, 43);
@@ -687,6 +754,16 @@
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(36, 538);
             this.panel23.TabIndex = 15;
+            this.tabGenre.Controls.Add(this.dgvGenre);
+            this.tabGenre.Controls.Add(this.panel10);
+            this.tabGenre.Controls.Add(this.panel11);
+            this.tabGenre.Font = new System.Drawing.Font("Lucida Handwriting", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabGenre.Location = new System.Drawing.Point(4, 22);
+            this.tabGenre.Name = "tabGenre";
+            this.tabGenre.Size = new System.Drawing.Size(1236, 613);
+            this.tabGenre.TabIndex = 3;
+            this.tabGenre.Text = "Genre";
+            this.tabGenre.UseVisualStyleBackColor = true;
             // 
             // panel24
             // 
@@ -752,6 +829,7 @@
             this.label3.Text = "Genre";
             // 
             // label8
+            // tabManager
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -763,6 +841,15 @@
             this.label8.Size = new System.Drawing.Size(109, 31);
             this.label8.TabIndex = 3;
             this.label8.Text = "Author";
+            this.tabManager.Controls.Add(this.panel13);
+            this.tabManager.Controls.Add(this.panel12);
+            this.tabManager.Font = new System.Drawing.Font("Lucida Handwriting", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabManager.Location = new System.Drawing.Point(4, 22);
+            this.tabManager.Name = "tabManager";
+            this.tabManager.Size = new System.Drawing.Size(1236, 613);
+            this.tabManager.TabIndex = 4;
+            this.tabManager.Text = "Manager";
+            this.tabManager.UseVisualStyleBackColor = true;
             // 
             // button13
             // 
@@ -792,12 +879,18 @@
             this.dataGridView3.TabIndex = 7;
             // 
             // panel10
+            // panel18
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel10.Location = new System.Drawing.Point(343, 54);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(10, 529);
             this.panel10.TabIndex = 6;
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel18.Location = new System.Drawing.Point(1, 568);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(882, 45);
+            this.panel18.TabIndex = 2;
             // 
             // panel28
             // 
@@ -817,6 +910,26 @@
             this.dataGridView4.TabIndex = 7;
             // 
             // panel29
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Black;
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel15.Location = new System.Drawing.Point(0, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(1, 613);
+            this.panel15.TabIndex = 0;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.panel17);
+            this.panel12.Controls.Add(this.panel14);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(353, 613);
+            this.panel12.TabIndex = 0;
+            // 
+            // panel17
             // 
             this.panel29.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel29.Location = new System.Drawing.Point(873, 54);
@@ -825,12 +938,29 @@
             this.panel29.TabIndex = 6;
             // 
             // panel30
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.label6);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(353, 54);
+            this.panel14.TabIndex = 0;
+            // 
+            // label6
             // 
             this.panel30.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel30.Location = new System.Drawing.Point(1, 54);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(10, 529);
             this.panel30.TabIndex = 5;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lucida Handwriting", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(4, 4);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(330, 41);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Asking for return";
             // 
             // LibarianMain
             // 
@@ -861,6 +991,14 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.tabGenreAuthor.ResumeLayout(false);
+            this.tabAuthor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAuthor)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.tabGenre.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGenre)).EndInit();
+            this.panel10.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.tabManager.ResumeLayout(false);
@@ -868,22 +1006,13 @@
             this.panel18.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
+            this.tabManager.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
             this.panel12.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
-            this.panel20.ResumeLayout(false);
-            this.panel21.ResumeLayout(false);
-            this.panel22.ResumeLayout(false);
-            this.panel22.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
