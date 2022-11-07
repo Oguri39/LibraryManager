@@ -54,7 +54,7 @@
             this.btnFilterAll = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.newBooksStudent1 = new NormalLibrary.Students.NewBooksStudent();
+            this.newBooksStudent = new NormalLibrary.Students.NewBooksStudent();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -392,7 +392,7 @@
             // 
             // panel22
             // 
-            this.panel22.Controls.Add(this.newBooksStudent1);
+            this.panel22.Controls.Add(this.newBooksStudent);
             this.panel22.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel22.Location = new System.Drawing.Point(0, 34);
@@ -400,13 +400,13 @@
             this.panel22.Size = new System.Drawing.Size(300, 686);
             this.panel22.TabIndex = 2;
             // 
-            // newBooksStudent1
+            // newBooksStudent
             // 
-            this.newBooksStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.newBooksStudent1.Location = new System.Drawing.Point(0, 0);
-            this.newBooksStudent1.Name = "newBooksStudent1";
-            this.newBooksStudent1.Size = new System.Drawing.Size(300, 686);
-            this.newBooksStudent1.TabIndex = 0;
+            this.newBooksStudent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newBooksStudent.Location = new System.Drawing.Point(0, 0);
+            this.newBooksStudent.Name = "newBooksStudent";
+            this.newBooksStudent.Size = new System.Drawing.Size(300, 686);
+            this.newBooksStudent.TabIndex = 0;
             // 
             // panel20
             // 
@@ -689,7 +689,7 @@
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Panel panel22;
         private HomeStudent homeStudent;
-        private NewBooksStudent newBooksStudent1;
+        private NewBooksStudent newBooksStudent;
         private BookselfStudent bookselfStudent;
         private ContactStudent contactStudent;
     }

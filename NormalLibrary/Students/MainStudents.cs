@@ -204,6 +204,7 @@ namespace NormalLibrary.Students
             contactStudent.Visible = false;
             homeStudent.Visible = true;
             homeStudent.HomeStudent_Load(sender, e);
+            newBooksStudent.NewBooksStudent_Load(sender, e);
         }
 
         private void btnFilterAll_Click(object sender, EventArgs e)

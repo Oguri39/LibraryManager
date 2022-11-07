@@ -28,20 +28,150 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panelBottom = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.windowTop = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnResize = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelBottom.SuspendLayout();
+            this.windowTop.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panelBottom
+            // 
+            this.panelBottom.BackColor = System.Drawing.Color.Transparent;
+            this.panelBottom.Controls.Add(this.flowLayoutPanel1);
+            this.panelBottom.Controls.Add(this.label5);
+            this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelBottom.Location = new System.Drawing.Point(0, 664);
+            this.panelBottom.Name = "panelBottom";
+            this.panelBottom.Size = new System.Drawing.Size(1244, 22);
+            this.panelBottom.TabIndex = 21;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Black;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1244, 1);
+            this.flowLayoutPanel1.TabIndex = 15;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1097, 2);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(144, 17);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Design by Oguri Takeshi";
+            // 
+            // windowTop
+            // 
+            this.windowTop.BackColor = System.Drawing.Color.Transparent;
+            this.windowTop.Controls.Add(this.panel1);
+            this.windowTop.Controls.Add(this.btnMinimize);
+            this.windowTop.Controls.Add(this.btnResize);
+            this.windowTop.Controls.Add(this.btnExit);
+            this.windowTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.windowTop.Location = new System.Drawing.Point(0, 0);
+            this.windowTop.Name = "windowTop";
+            this.windowTop.Size = new System.Drawing.Size(1244, 25);
+            this.windowTop.TabIndex = 20;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1244, 1);
+            this.panel1.TabIndex = 3;
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.Location = new System.Drawing.Point(1169, 3);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(20, 20);
+            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            // 
+            // btnResize
+            // 
+            this.btnResize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnResize.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnResize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnResize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResize.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.btnResize.FlatAppearance.BorderSize = 0;
+            this.btnResize.Location = new System.Drawing.Point(1195, 3);
+            this.btnResize.Name = "btnResize";
+            this.btnResize.Size = new System.Drawing.Size(20, 20);
+            this.btnResize.TabIndex = 1;
+            this.btnResize.UseVisualStyleBackColor = false;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackColor = System.Drawing.Color.Maroon;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.Location = new System.Drawing.Point(1221, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(20, 20);
+            this.btnExit.TabIndex = 0;
+            this.btnExit.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1244, 686);
+            this.panel2.TabIndex = 22;
             // 
             // AdminMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1244, 686);
+            this.Controls.Add(this.panelBottom);
+            this.Controls.Add(this.windowTop);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminMain";
             this.Text = "AdminMain";
+            this.panelBottom.ResumeLayout(false);
+            this.panelBottom.PerformLayout();
+            this.windowTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panelBottom;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel windowTop;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnMinimize;
+        private System.Windows.Forms.Button btnResize;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Panel panel2;
     }
 }

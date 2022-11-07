@@ -82,6 +82,12 @@
     <Compile Include="Students\BookItemDetailStudent.Designer.cs">
       <DependentUpon>BookItemDetailStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Students\NewBookItemStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Students\NewBookItemStudent.Designer.cs">
+      <DependentUpon>NewBookItemStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\Author.cs" />
     <Compile Include="Utilities\Book.cs" />
     <Compile Include="Utilities\BorrowedBook.cs" />
@@ -185,6 +191,9 @@
     <EmbeddedResource Include="Students\MainStudents.resx">
       <DependentUpon>MainStudents.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Students\NewBookItemStudent.resx">
+      <DependentUpon>NewBookItemStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Students\NewBooksStudent.resx">
       <DependentUpon>NewBooksStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,7 +214,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="notifications\" />
+    <Folder Include="Notifications\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
