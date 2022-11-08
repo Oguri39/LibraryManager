@@ -60,13 +60,45 @@ namespace NormalLibrary.Libarian
 
         private void LibarianMain_Load(object sender, EventArgs e)
         {
+            load_library();
+            load_genre();
+            load_author();
+            load_publisher();
+            load_return();
+            load_borrowed();
+        }
+        private void load_library() {
             dgvLibrary.DataSource = DatabaseConnection.GetDataTable("SELECT Book.BookId, Book.BookName, Book.BookNumberOfPages, Book.BookProductDate, Book.BookNumberOfCopies,Book.BookFee,Book.BookIsNew,Genre.GenreName,Author.AuthorName FROM Book JOIN BookHasGenre ON Book.BookId = BookHasGenre.BookId JOIN Genre ON Genre.GenreId = BookHasGenre.GenreId JOIN AuthorHasBooks  ON Book.BookId = AuthorHasBooks.BookId JOIN Author  ON Author.AuthorId = AuthorHasBooks.AuthorId");
 
         }
-
-        private void dgvLibrary_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        private void load_genre() {
+            dgvGenre.DataSource = DatabaseConnection.GetDataTable("SELECT * FROM Genre");
 
         }
-    }
+        private void load_publisher()
+        {
+            dgvPublisher.DataSource = DatabaseConnection.GetDataTable("SELECT * FROM Publisher");
+
+        }
+        private void load_author() {
+            dgvAuthor.DataSource = DatabaseConnection.GetDataTable("SELECT * FROM Author");
+
+        }
+        private void load_return() { 
+            dgvAskingReturn.DataSource = DatabaseConnection.GetDataTable("SELECT Profile.ProfileFirstName, Profile.ProfileLastName, Profile.ProfileSchoolId, Book.BookName, Book.BookFee, BorrowReciept.BorrowRecieptBorrowedDate, BorrowReciept.BorrowRecieptDeadline, BorrowReciept.BorrowRecieptQuantity FROM Profile JOIN [User]  ON Profile.ProfileId = [User].ProfileId  JOIN UserHasBorrowReciept ON [User].UserId = UserHasBorrowReciept.UserId  JOIN BorrowReciept  ON BorrowReciept.BorrowRecieptId = UserHasBorrowReciept.BorrowRecieptId  JOIN Book  ON Book.BookId = BorrowReciept.BookId Where UserHasBorrowReciept.UserHasBorrowRecieptIsAskingForCheck = 1;");
+        }
+        private void load_borrowed()
+        {
+
+            dgvCurrentlyBorrowed.DataSource = DatabaseConnection.GetDataTable("SELECT Profile.ProfileFirstName, Profile.ProfileLastName, Profile.ProfileSchoolId, Book.BookName, Book.BookFee, BorrowReciept.BorrowRecieptBorrowedDate, BorrowReciept.BorrowRecieptDeadline, BorrowReciept.BorrowRecieptQuantity FROM Profile JOIN [User]  ON Profile.ProfileId = [User].ProfileId  JOIN UserHasBorrowReciept ON [User].UserId = UserHasBorrowReciept.UserId  JOIN BorrowReciept  ON BorrowReciept.BorrowRecieptId = UserHasBorrowReciept.BorrowRecieptId  JOIN Book  ON Book.BookId = BorrowReciept.BookId Where UserHasBorrowReciept.UserHasBorrowRecieptIsAskingForCheck = 0;");
+
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            LibrianProfile new_form = new LibrianProfile(this);
+            new_form.Show();
+        }
+
+     }
 }

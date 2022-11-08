@@ -300,7 +300,7 @@ namespace NormalLibrary.Students
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            ProfileStudent new_form = new ProfileStudent();
+            ProfileStudent new_form = new ProfileStudent(this);
             new_form.Show();
         }
     }

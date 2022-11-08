@@ -219,7 +219,7 @@ namespace NormalLibrary
                 {
                     UserProfile profile = new UserProfile()
                     {
-                        ProfileId = int.Parse(rdr["UserId"].ToString().Trim()),
+                        ProfileId = int.Parse(rdr["ProfileId"].ToString().Trim()),
                         ProfileFirstName = rdr["ProfileFirstName"].ToString().Trim(),
                         ProfileLastName = rdr["ProfileLastName"].ToString().Trim(),
                         ProfileSchoolId = rdr["ProfileSchoolId"].ToString().Trim(),

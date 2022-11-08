@@ -16,5 +16,7 @@ namespace NormalLibrary.Admin
         {
             InitializeComponent();
         }
+
+
     }
 }

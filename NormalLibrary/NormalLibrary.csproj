@@ -58,11 +58,29 @@
     <Compile Include="FormTemplate.Designer.cs">
       <DependentUpon>FormTemplate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Libarian\LibarianChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Libarian\LibarianChangePassword.Designer.cs">
+      <DependentUpon>LibarianChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Libarian\LibarianEditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Libarian\LibarianEditProfile.Designer.cs">
+      <DependentUpon>LibarianEditProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Libarian\LibarianMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Libarian\LibarianMain.Designer.cs">
       <DependentUpon>LibarianMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Libarian\LibrianProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Libarian\LibrianProfile.Designer.cs">
+      <DependentUpon>LibrianProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="Students\BookBorrowedItemDetailStudent.cs">
       <SubType>Form</SubType>
@@ -81,6 +99,18 @@
     </Compile>
     <Compile Include="Students\BookItemDetailStudent.Designer.cs">
       <DependentUpon>BookItemDetailStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\EditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\EditProfile.Designer.cs">
+      <DependentUpon>EditProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="Students\NewBookItemStudent.cs">
       <SubType>UserControl</SubType>
@@ -152,8 +182,17 @@
     <EmbeddedResource Include="FormTemplate.resx">
       <DependentUpon>FormTemplate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Libarian\LibarianChangePassword.resx">
+      <DependentUpon>LibarianChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libarian\LibarianEditProfile.resx">
+      <DependentUpon>LibarianEditProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Libarian\LibarianMain.resx">
       <DependentUpon>LibarianMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libarian\LibrianProfile.resx">
+      <DependentUpon>LibrianProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -182,8 +221,14 @@
     <EmbeddedResource Include="Students\BookselfStudent.resx">
       <DependentUpon>BookselfStudent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Students\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Students\ContactStudent.resx">
       <DependentUpon>ContactStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\EditProfile.resx">
+      <DependentUpon>EditProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Students\HomeStudent.resx">
       <DependentUpon>HomeStudent.cs</DependentUpon>

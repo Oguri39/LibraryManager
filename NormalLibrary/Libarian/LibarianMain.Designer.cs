@@ -32,6 +32,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.windowTop = new System.Windows.Forms.Panel();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnResize = new System.Windows.Forms.Button();
@@ -40,61 +41,60 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabLibrary = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDeleteBook = new System.Windows.Forms.Button();
+            this.btnEditBook = new System.Windows.Forms.Button();
+            this.btnAddBook = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvLibrary = new System.Windows.Forms.DataGridView();
-            this.tabPublisher = new System.Windows.Forms.TabPage();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.tabGenrePublisherAuthor = new System.Windows.Forms.TabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.dgvPublisher = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tabGenreAuthor = new System.Windows.Forms.TabPage();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnDeletePublisher = new System.Windows.Forms.Button();
+            this.btnEditPublisher = new System.Windows.Forms.Button();
+            this.btnAddPublisher = new System.Windows.Forms.Button();
             this.panel23 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvAuthor = new System.Windows.Forms.DataGridView();
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnDeleteAuthor = new System.Windows.Forms.Button();
+            this.btnEditAuthor = new System.Windows.Forms.Button();
+            this.btnAddAuthor = new System.Windows.Forms.Button();
             this.panel22 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvGenre = new System.Windows.Forms.DataGridView();
             this.panel25 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btnDeleteGenre = new System.Windows.Forms.Button();
+            this.btnEditGenre = new System.Windows.Forms.Button();
+            this.btnAddGenre = new System.Windows.Forms.Button();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.tabManager = new System.Windows.Forms.TabPage();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dgvCurrentlyBorrowed = new System.Windows.Forms.DataGridView();
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.button14 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvAskingReturn = new System.Windows.Forms.DataGridView();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
+            this.btnAccept = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panelBottom.SuspendLayout();
@@ -105,28 +105,27 @@
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibrary)).BeginInit();
-            this.tabPublisher.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPublisher)).BeginInit();
-            this.panel6.SuspendLayout();
+            this.tabGenrePublisherAuthor.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.tabGenreAuthor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPublisher)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.panel23.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAuthor)).BeginInit();
             this.panel21.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGenre)).BeginInit();
             this.panel20.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel11.SuspendLayout();
             this.tabManager.SuspendLayout();
             this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCurrentlyBorrowed)).BeginInit();
             this.panel18.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAskingReturn)).BeginInit();
             this.panel17.SuspendLayout();
             this.panel14.SuspendLayout();
             this.SuspendLayout();
@@ -165,6 +164,7 @@
             // windowTop
             // 
             this.windowTop.BackColor = System.Drawing.Color.Transparent;
+            this.windowTop.Controls.Add(this.btnProfile);
             this.windowTop.Controls.Add(this.panel1);
             this.windowTop.Controls.Add(this.btnMinimize);
             this.windowTop.Controls.Add(this.btnResize);
@@ -175,6 +175,16 @@
             this.windowTop.Size = new System.Drawing.Size(1244, 25);
             this.windowTop.TabIndex = 17;
             this.windowTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.windowTop_MouseDown);
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.Location = new System.Drawing.Point(3, 1);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(75, 23);
+            this.btnProfile.TabIndex = 6;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // panel1
             // 
@@ -242,8 +252,7 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabLibrary);
-            this.tabControl1.Controls.Add(this.tabPublisher);
-            this.tabControl1.Controls.Add(this.tabGenreAuthor);
+            this.tabControl1.Controls.Add(this.tabGenrePublisherAuthor);
             this.tabControl1.Controls.Add(this.tabManager);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -268,41 +277,41 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btnDeleteBook);
+            this.panel4.Controls.Add(this.btnEditBook);
+            this.panel4.Controls.Add(this.btnAddBook);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(3, 578);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1230, 32);
             this.panel4.TabIndex = 6;
             // 
-            // button3
+            // btnDeleteBook
             // 
-            this.button3.Location = new System.Drawing.Point(1150, 6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDeleteBook.Location = new System.Drawing.Point(1150, 6);
+            this.btnDeleteBook.Name = "btnDeleteBook";
+            this.btnDeleteBook.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteBook.TabIndex = 7;
+            this.btnDeleteBook.Text = "Delete";
+            this.btnDeleteBook.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnEditBook
             // 
-            this.button2.Location = new System.Drawing.Point(1054, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Edit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEditBook.Location = new System.Drawing.Point(1054, 6);
+            this.btnEditBook.Name = "btnEditBook";
+            this.btnEditBook.Size = new System.Drawing.Size(75, 23);
+            this.btnEditBook.TabIndex = 6;
+            this.btnEditBook.Text = "Edit";
+            this.btnEditBook.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnAddBook
             // 
-            this.button1.Location = new System.Drawing.Point(952, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddBook.Location = new System.Drawing.Point(952, 6);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.Size = new System.Drawing.Size(75, 23);
+            this.btnAddBook.TabIndex = 5;
+            this.btnAddBook.Text = "Add";
+            this.btnAddBook.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -332,146 +341,139 @@
             this.dgvLibrary.Name = "dgvLibrary";
             this.dgvLibrary.Size = new System.Drawing.Size(1230, 607);
             this.dgvLibrary.TabIndex = 1;
-            this.dgvLibrary.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibrary_CellContentClick);
             // 
-            // tabPublisher
+            // tabGenrePublisherAuthor
             // 
-            this.tabPublisher.Controls.Add(this.panel7);
-            this.tabPublisher.Controls.Add(this.panel6);
-            this.tabPublisher.Controls.Add(this.panel5);
-            this.tabPublisher.Font = new System.Drawing.Font("Lucida Handwriting", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPublisher.Location = new System.Drawing.Point(4, 22);
-            this.tabPublisher.Name = "tabPublisher";
-            this.tabPublisher.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPublisher.Size = new System.Drawing.Size(1236, 613);
-            this.tabPublisher.TabIndex = 1;
-            this.tabPublisher.Text = "Publisher";
-            this.tabPublisher.UseVisualStyleBackColor = true;
+            this.tabGenrePublisherAuthor.Controls.Add(this.panel5);
+            this.tabGenrePublisherAuthor.Controls.Add(this.panel9);
+            this.tabGenrePublisherAuthor.Controls.Add(this.panel8);
+            this.tabGenrePublisherAuthor.Controls.Add(this.panel11);
+            this.tabGenrePublisherAuthor.Font = new System.Drawing.Font("Lucida Handwriting", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabGenrePublisherAuthor.Location = new System.Drawing.Point(4, 22);
+            this.tabGenrePublisherAuthor.Name = "tabGenrePublisherAuthor";
+            this.tabGenrePublisherAuthor.Size = new System.Drawing.Size(1236, 613);
+            this.tabGenrePublisherAuthor.TabIndex = 3;
+            this.tabGenrePublisherAuthor.Text = "Genre, Publisher and Author";
+            this.tabGenrePublisherAuthor.UseVisualStyleBackColor = true;
             // 
-            // panel7
+            // panel5
             // 
-            this.panel7.Controls.Add(this.dgvPublisher);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 46);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1230, 532);
-            this.panel7.TabIndex = 8;
+            this.panel5.Controls.Add(this.dgvPublisher);
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.panel7);
+            this.panel5.Controls.Add(this.panel23);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(412, 43);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(407, 570);
+            this.panel5.TabIndex = 15;
             // 
             // dgvPublisher
             // 
             this.dgvPublisher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPublisher.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvPublisher.Location = new System.Drawing.Point(0, 0);
+            this.dgvPublisher.Location = new System.Drawing.Point(0, 69);
             this.dgvPublisher.Name = "dgvPublisher";
-            this.dgvPublisher.Size = new System.Drawing.Size(1230, 532);
-            this.dgvPublisher.TabIndex = 0;
+            this.dgvPublisher.Size = new System.Drawing.Size(397, 470);
+            this.dgvPublisher.TabIndex = 8;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.button4);
-            this.panel6.Controls.Add(this.button5);
-            this.panel6.Controls.Add(this.button6);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(3, 578);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(397, 69);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1230, 32);
+            this.panel6.Size = new System.Drawing.Size(10, 470);
             this.panel6.TabIndex = 7;
             // 
-            // button4
+            // panel7
             // 
-            this.button4.Location = new System.Drawing.Point(1150, 6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = true;
+            this.panel7.Controls.Add(this.btnDeletePublisher);
+            this.panel7.Controls.Add(this.btnEditPublisher);
+            this.panel7.Controls.Add(this.btnAddPublisher);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel7.Location = new System.Drawing.Point(0, 539);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(407, 31);
+            this.panel7.TabIndex = 6;
             // 
-            // button5
+            // btnDeletePublisher
             // 
-            this.button5.Location = new System.Drawing.Point(1054, 6);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Edit";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnDeletePublisher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeletePublisher.Location = new System.Drawing.Point(325, 3);
+            this.btnDeletePublisher.Name = "btnDeletePublisher";
+            this.btnDeletePublisher.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletePublisher.TabIndex = 10;
+            this.btnDeletePublisher.Text = "Delete";
+            this.btnDeletePublisher.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnEditPublisher
             // 
-            this.button6.Location = new System.Drawing.Point(952, 6);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Add";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnEditPublisher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditPublisher.Location = new System.Drawing.Point(229, 3);
+            this.btnEditPublisher.Name = "btnEditPublisher";
+            this.btnEditPublisher.Size = new System.Drawing.Size(75, 23);
+            this.btnEditPublisher.TabIndex = 9;
+            this.btnEditPublisher.Text = "Edit";
+            this.btnEditPublisher.UseVisualStyleBackColor = true;
             // 
-            // panel5
+            // btnAddPublisher
             // 
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(3, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1230, 43);
-            this.panel5.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Handwriting", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(5, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(248, 31);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Publisher control";
-            // 
-            // tabGenreAuthor
-            // 
-            this.tabGenreAuthor.Controls.Add(this.panel23);
-            this.tabGenreAuthor.Controls.Add(this.panel9);
-            this.tabGenreAuthor.Controls.Add(this.panel8);
-            this.tabGenreAuthor.Controls.Add(this.panel11);
-            this.tabGenreAuthor.Font = new System.Drawing.Font("Lucida Handwriting", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabGenreAuthor.Location = new System.Drawing.Point(4, 22);
-            this.tabGenreAuthor.Name = "tabGenreAuthor";
-            this.tabGenreAuthor.Size = new System.Drawing.Size(1236, 613);
-            this.tabGenreAuthor.TabIndex = 3;
-            this.tabGenreAuthor.Text = "Genre and Author";
-            this.tabGenreAuthor.UseVisualStyleBackColor = true;
+            this.btnAddPublisher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddPublisher.Location = new System.Drawing.Point(127, 3);
+            this.btnAddPublisher.Name = "btnAddPublisher";
+            this.btnAddPublisher.Size = new System.Drawing.Size(75, 23);
+            this.btnAddPublisher.TabIndex = 8;
+            this.btnAddPublisher.Text = "Add";
+            this.btnAddPublisher.UseVisualStyleBackColor = true;
             // 
             // panel23
             // 
-            this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel23.Location = new System.Drawing.Point(600, 43);
-            this.panel23.MaximumSize = new System.Drawing.Size(36, 538);
+            this.panel23.Controls.Add(this.label2);
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel23.Location = new System.Drawing.Point(0, 0);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(36, 538);
-            this.panel23.TabIndex = 15;
+            this.panel23.Size = new System.Drawing.Size(407, 69);
+            this.panel23.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Handwriting", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(121, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 31);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Publisher";
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.dataGridView2);
+            this.panel9.Controls.Add(this.dgvAuthor);
             this.panel9.Controls.Add(this.panel26);
             this.panel9.Controls.Add(this.panel27);
             this.panel9.Controls.Add(this.panel21);
             this.panel9.Controls.Add(this.panel22);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(636, 43);
+            this.panel9.Location = new System.Drawing.Point(819, 43);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(600, 570);
+            this.panel9.Size = new System.Drawing.Size(417, 570);
             this.panel9.TabIndex = 14;
             // 
-            // dataGridView2
+            // dgvAuthor
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(10, 69);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(580, 470);
-            this.dataGridView2.TabIndex = 6;
+            this.dgvAuthor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAuthor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvAuthor.Location = new System.Drawing.Point(10, 69);
+            this.dgvAuthor.Name = "dgvAuthor";
+            this.dgvAuthor.Size = new System.Drawing.Size(397, 470);
+            this.dgvAuthor.TabIndex = 6;
             // 
             // panel26
             // 
             this.panel26.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel26.Location = new System.Drawing.Point(590, 69);
+            this.panel26.Location = new System.Drawing.Point(407, 69);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(10, 470);
             this.panel26.TabIndex = 5;
@@ -486,41 +488,44 @@
             // 
             // panel21
             // 
-            this.panel21.Controls.Add(this.button7);
-            this.panel21.Controls.Add(this.button8);
-            this.panel21.Controls.Add(this.button9);
+            this.panel21.Controls.Add(this.btnDeleteAuthor);
+            this.panel21.Controls.Add(this.btnEditAuthor);
+            this.panel21.Controls.Add(this.btnAddAuthor);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel21.Location = new System.Drawing.Point(0, 539);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(600, 31);
+            this.panel21.Size = new System.Drawing.Size(417, 31);
             this.panel21.TabIndex = 3;
             // 
-            // button7
+            // btnDeleteAuthor
             // 
-            this.button7.Location = new System.Drawing.Point(518, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "Delete";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnDeleteAuthor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteAuthor.Location = new System.Drawing.Point(335, 3);
+            this.btnDeleteAuthor.Name = "btnDeleteAuthor";
+            this.btnDeleteAuthor.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteAuthor.TabIndex = 10;
+            this.btnDeleteAuthor.Text = "Delete";
+            this.btnDeleteAuthor.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnEditAuthor
             // 
-            this.button8.Location = new System.Drawing.Point(422, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "Edit";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnEditAuthor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditAuthor.Location = new System.Drawing.Point(239, 3);
+            this.btnEditAuthor.Name = "btnEditAuthor";
+            this.btnEditAuthor.Size = new System.Drawing.Size(75, 23);
+            this.btnEditAuthor.TabIndex = 9;
+            this.btnEditAuthor.Text = "Edit";
+            this.btnEditAuthor.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnAddAuthor
             // 
-            this.button9.Location = new System.Drawing.Point(320, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "Add";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnAddAuthor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddAuthor.Location = new System.Drawing.Point(137, 3);
+            this.btnAddAuthor.Name = "btnAddAuthor";
+            this.btnAddAuthor.Size = new System.Drawing.Size(75, 23);
+            this.btnAddAuthor.TabIndex = 8;
+            this.btnAddAuthor.Text = "Add";
+            this.btnAddAuthor.UseVisualStyleBackColor = true;
             // 
             // panel22
             // 
@@ -528,7 +533,7 @@
             this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel22.Location = new System.Drawing.Point(0, 0);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(600, 69);
+            this.panel22.Size = new System.Drawing.Size(417, 69);
             this.panel22.TabIndex = 2;
             // 
             // label8
@@ -538,7 +543,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Lucida Handwriting", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(250, 17);
+            this.label8.Location = new System.Drawing.Point(162, 17);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 31);
             this.label8.TabIndex = 3;
@@ -546,7 +551,7 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.dataGridView1);
+            this.panel8.Controls.Add(this.dgvGenre);
             this.panel8.Controls.Add(this.panel25);
             this.panel8.Controls.Add(this.panel24);
             this.panel8.Controls.Add(this.panel20);
@@ -554,22 +559,22 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 43);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(600, 570);
+            this.panel8.Size = new System.Drawing.Size(412, 570);
             this.panel8.TabIndex = 13;
             // 
-            // dataGridView1
+            // dgvGenre
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 69);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(580, 470);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvGenre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGenre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvGenre.Location = new System.Drawing.Point(10, 69);
+            this.dgvGenre.Name = "dgvGenre";
+            this.dgvGenre.Size = new System.Drawing.Size(392, 470);
+            this.dgvGenre.TabIndex = 4;
             // 
             // panel25
             // 
             this.panel25.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel25.Location = new System.Drawing.Point(590, 69);
+            this.panel25.Location = new System.Drawing.Point(402, 69);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(10, 470);
             this.panel25.TabIndex = 3;
@@ -584,41 +589,44 @@
             // 
             // panel20
             // 
-            this.panel20.Controls.Add(this.button10);
-            this.panel20.Controls.Add(this.button11);
-            this.panel20.Controls.Add(this.button12);
+            this.panel20.Controls.Add(this.btnDeleteGenre);
+            this.panel20.Controls.Add(this.btnEditGenre);
+            this.panel20.Controls.Add(this.btnAddGenre);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel20.Location = new System.Drawing.Point(0, 539);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(600, 31);
+            this.panel20.Size = new System.Drawing.Size(412, 31);
             this.panel20.TabIndex = 1;
             // 
-            // button10
+            // btnDeleteGenre
             // 
-            this.button10.Location = new System.Drawing.Point(518, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 10;
-            this.button10.Text = "Delete";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnDeleteGenre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteGenre.Location = new System.Drawing.Point(330, 3);
+            this.btnDeleteGenre.Name = "btnDeleteGenre";
+            this.btnDeleteGenre.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteGenre.TabIndex = 10;
+            this.btnDeleteGenre.Text = "Delete";
+            this.btnDeleteGenre.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // btnEditGenre
             // 
-            this.button11.Location = new System.Drawing.Point(422, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 9;
-            this.button11.Text = "Edit";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnEditGenre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditGenre.Location = new System.Drawing.Point(234, 3);
+            this.btnEditGenre.Name = "btnEditGenre";
+            this.btnEditGenre.Size = new System.Drawing.Size(75, 23);
+            this.btnEditGenre.TabIndex = 9;
+            this.btnEditGenre.Text = "Edit";
+            this.btnEditGenre.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // btnAddGenre
             // 
-            this.button12.Location = new System.Drawing.Point(320, 3);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 8;
-            this.button12.Text = "Add";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnAddGenre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddGenre.Location = new System.Drawing.Point(132, 3);
+            this.btnAddGenre.Name = "btnAddGenre";
+            this.btnAddGenre.Size = new System.Drawing.Size(75, 23);
+            this.btnAddGenre.TabIndex = 8;
+            this.btnAddGenre.Text = "Add";
+            this.btnAddGenre.UseVisualStyleBackColor = true;
             // 
             // panel19
             // 
@@ -626,7 +634,7 @@
             this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel19.Location = new System.Drawing.Point(0, 0);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(600, 69);
+            this.panel19.Size = new System.Drawing.Size(412, 69);
             this.panel19.TabIndex = 0;
             // 
             // label3
@@ -636,7 +644,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lucida Handwriting", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(248, 17);
+            this.label3.Location = new System.Drawing.Point(154, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 31);
             this.label3.TabIndex = 2;
@@ -657,9 +665,9 @@
             this.label4.Font = new System.Drawing.Font("Lucida Handwriting", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(5, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(366, 31);
+            this.label4.Size = new System.Drawing.Size(509, 31);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Genre and Author control";
+            this.label4.Text = "Genre, Publisher and Author control";
             // 
             // tabManager
             // 
@@ -675,33 +683,33 @@
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.dataGridView4);
+            this.panel13.Controls.Add(this.dgvCurrentlyBorrowed);
             this.panel13.Controls.Add(this.panel29);
             this.panel13.Controls.Add(this.panel30);
             this.panel13.Controls.Add(this.panel18);
             this.panel13.Controls.Add(this.panel16);
             this.panel13.Controls.Add(this.panel15);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(353, 0);
+            this.panel13.Location = new System.Drawing.Point(592, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(883, 613);
+            this.panel13.Size = new System.Drawing.Size(644, 613);
             this.panel13.TabIndex = 1;
             // 
-            // dataGridView4
+            // dgvCurrentlyBorrowed
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView4.Location = new System.Drawing.Point(11, 54);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(862, 514);
-            this.dataGridView4.TabIndex = 7;
+            this.dgvCurrentlyBorrowed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCurrentlyBorrowed.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCurrentlyBorrowed.Location = new System.Drawing.Point(11, 54);
+            this.dgvCurrentlyBorrowed.Name = "dgvCurrentlyBorrowed";
+            this.dgvCurrentlyBorrowed.Size = new System.Drawing.Size(623, 529);
+            this.dgvCurrentlyBorrowed.TabIndex = 7;
             // 
             // panel29
             // 
             this.panel29.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel29.Location = new System.Drawing.Point(873, 54);
+            this.panel29.Location = new System.Drawing.Point(634, 54);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(10, 514);
+            this.panel29.Size = new System.Drawing.Size(10, 529);
             this.panel29.TabIndex = 6;
             // 
             // panel30
@@ -709,26 +717,27 @@
             this.panel30.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel30.Location = new System.Drawing.Point(1, 54);
             this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(10, 514);
+            this.panel30.Size = new System.Drawing.Size(10, 529);
             this.panel30.TabIndex = 5;
             // 
             // panel18
             // 
-            this.panel18.Controls.Add(this.button14);
+            this.panel18.Controls.Add(this.btnDelete);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel18.Location = new System.Drawing.Point(1, 568);
+            this.panel18.Location = new System.Drawing.Point(1, 583);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(882, 45);
+            this.panel18.Size = new System.Drawing.Size(643, 30);
             this.panel18.TabIndex = 2;
             // 
-            // button14
+            // btnDelete
             // 
-            this.button14.Location = new System.Drawing.Point(799, 3);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
-            this.button14.TabIndex = 11;
-            this.button14.Text = "Delete";
-            this.button14.UseVisualStyleBackColor = true;
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Location = new System.Drawing.Point(560, 3);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 11;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // panel16
             // 
@@ -736,7 +745,7 @@
             this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel16.Location = new System.Drawing.Point(1, 0);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(882, 54);
+            this.panel16.Size = new System.Drawing.Size(643, 54);
             this.panel16.TabIndex = 1;
             // 
             // label7
@@ -760,7 +769,7 @@
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.dataGridView3);
+            this.panel12.Controls.Add(this.dgvAskingReturn);
             this.panel12.Controls.Add(this.panel10);
             this.panel12.Controls.Add(this.panel28);
             this.panel12.Controls.Add(this.panel17);
@@ -768,22 +777,22 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(353, 613);
+            this.panel12.Size = new System.Drawing.Size(592, 613);
             this.panel12.TabIndex = 0;
             // 
-            // dataGridView3
+            // dgvAskingReturn
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(10, 54);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(333, 529);
-            this.dataGridView3.TabIndex = 7;
+            this.dgvAskingReturn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAskingReturn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvAskingReturn.Location = new System.Drawing.Point(10, 54);
+            this.dgvAskingReturn.Name = "dgvAskingReturn";
+            this.dgvAskingReturn.Size = new System.Drawing.Size(572, 529);
+            this.dgvAskingReturn.TabIndex = 7;
             // 
             // panel10
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(343, 54);
+            this.panel10.Location = new System.Drawing.Point(582, 54);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(10, 529);
             this.panel10.TabIndex = 6;
@@ -798,21 +807,22 @@
             // 
             // panel17
             // 
-            this.panel17.Controls.Add(this.button13);
+            this.panel17.Controls.Add(this.btnAccept);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel17.Location = new System.Drawing.Point(0, 583);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(353, 30);
+            this.panel17.Size = new System.Drawing.Size(592, 30);
             this.panel17.TabIndex = 1;
             // 
-            // button13
+            // btnAccept
             // 
-            this.button13.Location = new System.Drawing.Point(272, 3);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 10;
-            this.button13.Text = "Accept";
-            this.button13.UseVisualStyleBackColor = true;
+            this.btnAccept.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAccept.Location = new System.Drawing.Point(511, 3);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(75, 23);
+            this.btnAccept.TabIndex = 10;
+            this.btnAccept.Text = "Accept";
+            this.btnAccept.UseVisualStyleBackColor = true;
             // 
             // panel14
             // 
@@ -820,7 +830,7 @@
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel14.Location = new System.Drawing.Point(0, 0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(353, 54);
+            this.panel14.Size = new System.Drawing.Size(592, 54);
             this.panel14.TabIndex = 0;
             // 
             // label6
@@ -855,20 +865,19 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibrary)).EndInit();
-            this.tabPublisher.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPublisher)).EndInit();
-            this.panel6.ResumeLayout(false);
+            this.tabGenrePublisherAuthor.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.tabGenreAuthor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPublisher)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
             this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAuthor)).EndInit();
             this.panel21.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGenre)).EndInit();
             this.panel20.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
@@ -876,12 +885,12 @@
             this.panel11.PerformLayout();
             this.tabManager.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCurrentlyBorrowed)).EndInit();
             this.panel18.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.panel12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAskingReturn)).EndInit();
             this.panel17.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
@@ -902,24 +911,15 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabLibrary;
-        private System.Windows.Forms.TabPage tabPublisher;
-        private System.Windows.Forms.TabPage tabGenreAuthor;
+        private System.Windows.Forms.TabPage tabGenrePublisherAuthor;
         private System.Windows.Forms.TabPage tabManager;
         private System.Windows.Forms.DataGridView dgvLibrary;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDeleteBook;
+        private System.Windows.Forms.Button btnEditBook;
+        private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.DataGridView dgvPublisher;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel13;
@@ -935,30 +935,39 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvAuthor;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnDeleteAuthor;
+        private System.Windows.Forms.Button btnEditAuthor;
+        private System.Windows.Forms.Button btnAddAuthor;
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvGenre;
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnDeleteGenre;
+        private System.Windows.Forms.Button btnEditGenre;
+        private System.Windows.Forms.Button btnAddGenre;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView dgvCurrentlyBorrowed;
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.Panel panel30;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.DataGridView dgvAskingReturn;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel28;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button btnAccept;
+        private System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.DataGridView dgvPublisher;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button btnDeletePublisher;
+        private System.Windows.Forms.Button btnEditPublisher;
+        private System.Windows.Forms.Button btnAddPublisher;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Label label2;
     }
 }

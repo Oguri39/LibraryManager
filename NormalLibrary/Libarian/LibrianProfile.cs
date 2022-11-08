@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NormalLibrary.Students;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,10 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NormalLibrary.Students
+namespace NormalLibrary.Libarian
 {
-
-    public partial class ProfileStudent : Form
+    public partial class LibrianProfile : Form
     {
         private const int WM_NCLBUTTONDOWN = 0xA1;
         private const int HT_CAPTION = 0x2;
@@ -19,14 +19,13 @@ namespace NormalLibrary.Students
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
-        MainStudents tmp_main;
+        LibarianMain tmp_main;
         UserProfile user_profile;
-        public ProfileStudent(MainStudents tmp_main)
+        public LibrianProfile(LibarianMain tmp_main)
         {
             InitializeComponent();
             this.tmp_main = tmp_main;
         }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -44,22 +43,7 @@ namespace NormalLibrary.Students
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            EditProfile new_form = new EditProfile(this);
-            new_form.Show();
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            LoginForm login_form = new LoginForm();
-            login_form.Show();
-            tmp_main.Close();
-            this.Close();
-        }
-
-        public void ProfileStudent_Load(object sender, EventArgs e)
+        public void LibrianProfile_Load(object sender, EventArgs e)
         {
             user_profile = DatabaseConnection.GetUserProfile("SELECT * FROM Profile WHERE ProfileId = " + Program.login_user.ProfileId + ";");
             txtFirstName.Text = user_profile.ProfileFirstName;
@@ -70,10 +54,24 @@ namespace NormalLibrary.Students
             txtAddress.Text = user_profile.ProfileAddress;
         }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            LibarianEditProfile new_form = new LibarianEditProfile(this);
+            new_form.Show();
+        }
+
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            ChangePassword new_form = new ChangePassword();
+            LibarianChangePassword new_form = new LibarianChangePassword();
             new_form.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            LoginForm login_form = new LoginForm();
+            login_form.Show();
+            tmp_main.Close();
+            this.Close();
         }
     }
 }
