@@ -58,7 +58,7 @@ namespace NormalLibrary.Libarian
             }
         }
 
-        private void LibarianMain_Load(object sender, EventArgs e)
+        public void LibarianMain_Load(object sender, EventArgs e)
         {
             load_library();
             load_genre();
@@ -100,5 +100,20 @@ namespace NormalLibrary.Libarian
             new_form.Show();
         }
 
-     }
+        private void btnAddBook_Click(object sender, EventArgs e)
+        {
+            LibarianAddBookForm new_form = new LibarianAddBookForm(this);
+            new_form.Show();
+        }
+
+        private void btnEditBook_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeleteBook_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

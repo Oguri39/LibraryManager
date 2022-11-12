@@ -58,6 +58,12 @@
     <Compile Include="FormTemplate.Designer.cs">
       <DependentUpon>FormTemplate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Libarian\LibarianAddBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Libarian\LibarianAddBookForm.Designer.cs">
+      <DependentUpon>LibarianAddBookForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Libarian\LibarianChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTemplate.resx">
       <DependentUpon>FormTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libarian\LibarianAddBookForm.resx">
+      <DependentUpon>LibarianAddBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Libarian\LibarianChangePassword.resx">
       <DependentUpon>LibarianChangePassword.cs</DependentUpon>

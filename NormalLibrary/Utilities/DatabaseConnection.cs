@@ -328,6 +328,25 @@ namespace NormalLibrary
             return reciept_id;
 
         }
+        public static int GetAddBookId()
+        {
+            SqlConnection connecting = CreateConnection();
+            connecting.Open();
+            string sql = "SELECT * FROM Book";
+            SqlCommand command = new SqlCommand(sql, connecting);
+            int book_id = 0;
+            using (var rdr = command.ExecuteReader())
+            {
+                while (rdr.Read())
+                {
+                    book_id = int.Parse(rdr["BookId"].ToString().Trim());
+                }
+                rdr.Close();
+            }
+            connecting.Close();
+            return book_id;
+
+        }
         public static void CreateCommand(string sql)
         {
             SqlConnection connecting = CreateConnection();
