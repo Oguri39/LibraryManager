@@ -192,6 +192,7 @@
             this.btnDeleteAuthor.TabIndex = 10;
             this.btnDeleteAuthor.Text = "Delete";
             this.btnDeleteAuthor.UseVisualStyleBackColor = true;
+            this.btnDeleteAuthor.Click += new System.EventHandler(this.btnDeleteAuthor_Click_1);
             // 
             // btnEditAuthor
             // 
@@ -202,6 +203,7 @@
             this.btnEditAuthor.TabIndex = 9;
             this.btnEditAuthor.Text = "Edit";
             this.btnEditAuthor.UseVisualStyleBackColor = true;
+            this.btnEditAuthor.Click += new System.EventHandler(this.btnEditAuthor_Click_1);
             // 
             // btnAddAuthor
             // 
@@ -212,6 +214,7 @@
             this.btnAddAuthor.TabIndex = 8;
             this.btnAddAuthor.Text = "Add";
             this.btnAddAuthor.UseVisualStyleBackColor = true;
+            this.btnAddAuthor.Click += new System.EventHandler(this.btnAddAuthor_Click_1);
             // 
             // panel22
             // 
@@ -293,6 +296,7 @@
             this.btnDeleteGenre.TabIndex = 10;
             this.btnDeleteGenre.Text = "Delete";
             this.btnDeleteGenre.UseVisualStyleBackColor = true;
+            this.btnDeleteGenre.Click += new System.EventHandler(this.btnDeleteGenre_Click_1);
             // 
             // btnEditGenre
             // 
@@ -303,6 +307,7 @@
             this.btnEditGenre.TabIndex = 9;
             this.btnEditGenre.Text = "Edit";
             this.btnEditGenre.UseVisualStyleBackColor = true;
+            this.btnEditGenre.Click += new System.EventHandler(this.btnEditGenre_Click_1);
             // 
             // btnAddGenre
             // 
@@ -313,6 +318,7 @@
             this.btnAddGenre.TabIndex = 8;
             this.btnAddGenre.Text = "Add";
             this.btnAddGenre.UseVisualStyleBackColor = true;
+            this.btnAddGenre.Click += new System.EventHandler(this.btnAddGenre_Click_1);
             // 
             // panel19
             // 
@@ -443,6 +449,7 @@
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // panel16
             // 
@@ -528,6 +535,7 @@
             this.btnAccept.TabIndex = 10;
             this.btnAccept.Text = "Accept";
             this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click_1);
             // 
             // panel27
             // 
@@ -545,6 +553,7 @@
             this.btnDeleteBook.TabIndex = 7;
             this.btnDeleteBook.Text = "Delete";
             this.btnDeleteBook.UseVisualStyleBackColor = true;
+            this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click_1);
             // 
             // btnEditBook
             // 
@@ -554,6 +563,7 @@
             this.btnEditBook.TabIndex = 6;
             this.btnEditBook.Text = "Edit";
             this.btnEditBook.UseVisualStyleBackColor = true;
+            this.btnEditBook.Click += new System.EventHandler(this.btnEditBook_Click_1);
             // 
             // panel4
             // 
@@ -574,6 +584,7 @@
             this.btnAddBook.TabIndex = 5;
             this.btnAddBook.Text = "Add";
             this.btnAddBook.UseVisualStyleBackColor = true;
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click_1);
             // 
             // btnProfile
             // 
@@ -583,6 +594,7 @@
             this.btnProfile.TabIndex = 6;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click_1);
             // 
             // panel1
             // 
@@ -740,6 +752,7 @@
             this.btnDeletePublisher.TabIndex = 10;
             this.btnDeletePublisher.Text = "Delete";
             this.btnDeletePublisher.UseVisualStyleBackColor = true;
+            this.btnDeletePublisher.Click += new System.EventHandler(this.btnDeletePublisher_Click_1);
             // 
             // btnEditPublisher
             // 
@@ -750,6 +763,7 @@
             this.btnEditPublisher.TabIndex = 9;
             this.btnEditPublisher.Text = "Edit";
             this.btnEditPublisher.UseVisualStyleBackColor = true;
+            this.btnEditPublisher.Click += new System.EventHandler(this.btnEditPublisher_Click_1);
             // 
             // btnAddPublisher
             // 
@@ -760,6 +774,7 @@
             this.btnAddPublisher.TabIndex = 8;
             this.btnAddPublisher.Text = "Add";
             this.btnAddPublisher.UseVisualStyleBackColor = true;
+            this.btnAddPublisher.Click += new System.EventHandler(this.btnAddPublisher_Click_1);
             // 
             // panel23
             // 
@@ -1109,6 +1124,7 @@
             this.btnExit.Size = new System.Drawing.Size(20, 20);
             this.btnExit.TabIndex = 0;
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
             // flowLayoutPanel1
             // 

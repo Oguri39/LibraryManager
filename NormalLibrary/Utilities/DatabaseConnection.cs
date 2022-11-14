@@ -207,6 +207,99 @@ namespace NormalLibrary
             connecting.Close();
             return new_book;
         }
+        public static Genre GetGenre(string sql)
+        {
+            SqlConnection connecting = CreateConnection();
+            connecting.Open();
+            SqlCommand command = new SqlCommand(sql, connecting);
+            Genre new_genre = new Genre();
+            using (var rdr = command.ExecuteReader())
+            {
+                while (rdr.Read())
+                {
+                    Genre genre = new Genre()
+                    {
+                        GenreId = int.Parse(rdr["GenreId"].ToString().Trim()),
+                        GenreName = rdr["GenreName"].ToString().Trim(),
+                    };
+                    new_genre = genre;
+                }
+                rdr.Close();
+            }
+            connecting.Close();
+            return new_genre;
+        }
+        public static Author GetAuthor(string sql)
+        {
+            SqlConnection connecting = CreateConnection();
+            connecting.Open();
+            SqlCommand command = new SqlCommand(sql, connecting);
+            Author new_author = new Author();
+            using (var rdr = command.ExecuteReader())
+            {
+                while (rdr.Read())
+                {
+                    Author author = new Author()
+                    {
+                        AuthorId = int.Parse(rdr["AuthorId"].ToString().Trim()),
+                        AuthorName = rdr["AuthorName"].ToString().Trim(),
+                    };
+                    new_author = author;
+                }
+                rdr.Close();
+            }
+            connecting.Close();
+            return new_author;
+        }
+        public static Publisher GetPublisher(string sql)
+        {
+            SqlConnection connecting = CreateConnection();
+            connecting.Open();
+            SqlCommand command = new SqlCommand(sql, connecting);
+            Publisher new_publisher = new Publisher();
+            using (var rdr = command.ExecuteReader())
+            {
+                while (rdr.Read())
+                {
+                    Publisher publisher = new Publisher()
+                    {
+                        PublisherId = int.Parse(rdr["PublisherId"].ToString().Trim()),
+                        PublisherName = rdr["PublisherName"].ToString().Trim(),
+                    };
+                    new_publisher = publisher;
+                }
+                rdr.Close();
+            }
+            connecting.Close();
+            return new_publisher;
+        }
+        public static BorrowReciept GetBorrowReciept(string sql)
+        {
+            SqlConnection connecting = CreateConnection();
+            connecting.Open();
+            SqlCommand command = new SqlCommand(sql, connecting);
+            BorrowReciept new_borrowReciept = new BorrowReciept();
+            using (var rdr = command.ExecuteReader())
+            {
+                while (rdr.Read())
+                {
+                    BorrowReciept borrowReciept = new BorrowReciept()
+                    {
+                        BorrowRecieptId = int.Parse(rdr["BorrowRecieptId"].ToString().Trim()),
+                        BorrowRecieptBorrowedDate = rdr["BorrowRecieptBorrowedDate"].ToString().Trim(),
+                        BorrowRecieptQuantity = int.Parse(rdr["BorrowRecieptQuantity"].ToString().Trim()),
+                        BorrowRecieptDeadline = rdr["BorrowRecieptDeadline"].ToString().Trim(),
+                        BookId = int.Parse(rdr["BookId"].ToString().Trim()),
+                        UserId = int.Parse(rdr["UserId"].ToString().Trim()),
+                    };
+                    new_borrowReciept = borrowReciept;
+                }
+                rdr.Close();
+            }
+            connecting.Close();
+            return new_borrowReciept;
+        }
+
         public static UserProfile GetUserProfile(string sql)
         {
             SqlConnection connecting = CreateConnection();
@@ -326,6 +419,33 @@ namespace NormalLibrary
             }
             connecting.Close();
             return reciept_id;
+
+        }
+        public static bool CheckIfBookIsBorrowed(int id)
+        {
+            SqlConnection connecting = CreateConnection();
+            connecting.Open();
+            string sql = "SELECT * FROM BorrowReciept WHERE BookId = " + id + "; ";
+            SqlCommand command = new SqlCommand(sql, connecting);
+            int count = 0;
+            using (var rdr = command.ExecuteReader())
+            {
+                while (rdr.Read())
+                {
+                    if (int.Parse(rdr["BorrowRecieptId"].ToString().Trim()) == 0) {
+                        count = count+ 1;
+                    }
+                }
+                rdr.Close();
+            }
+            connecting.Close();
+            if (count > 0)
+            {
+                return true;
+            }
+            else { 
+                return false;
+            }
 
         }
         public static int GetAddBookId()

@@ -52,7 +52,7 @@ namespace NormalLibrary.Libarian
                 String new_bookFee = txtBookFee.Text.Trim();
                 String new_bookNumberOfCopies = txtNumberOfCopies.Text.Trim();
                 String new_bookNumberOfPages = txtNumberOfPages.Text.Trim();
-                String new_bookProductDate = releaseDate.Value.ToString("yyyy-MM-dd HH:mm:ss.fff");
+                String new_bookProductDate = releaseDate.Value.ToString("yyyy-MM-dd HH:mm:ss.ff");
                 String new_bookDescription = txtDescription.Text.ToString();
                 String new_bookImage = "";
                 String new_bookIsnew = "0";

@@ -64,11 +64,29 @@
     <Compile Include="Libarian\LibarianAddBookForm.Designer.cs">
       <DependentUpon>LibarianAddBookForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Libarian\LibarianAddGenrePublisherAuthorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Libarian\LibarianAddGenrePublisherAuthorForm.Designer.cs">
+      <DependentUpon>LibarianAddGenrePublisherAuthorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Libarian\LibarianChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Libarian\LibarianChangePassword.Designer.cs">
       <DependentUpon>LibarianChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Libarian\LibarianEditBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Libarian\LibarianEditBookForm.Designer.cs">
+      <DependentUpon>LibarianEditBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Libarian\LibarianEditGenrePublisherAuthorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Libarian\LibarianEditGenrePublisherAuthorForm.Designer.cs">
+      <DependentUpon>LibarianEditGenrePublisherAuthorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Libarian\LibarianEditProfile.cs">
       <SubType>Form</SubType>
@@ -127,6 +145,7 @@
     <Compile Include="Utilities\Author.cs" />
     <Compile Include="Utilities\Book.cs" />
     <Compile Include="Utilities\BorrowedBook.cs" />
+    <Compile Include="Utilities\BorrowReciept.cs" />
     <Compile Include="Utilities\DatabaseConnection.cs" />
     <Compile Include="Utilities\Genre.cs" />
     <Compile Include="LoginForm.cs">
@@ -191,8 +210,17 @@
     <EmbeddedResource Include="Libarian\LibarianAddBookForm.resx">
       <DependentUpon>LibarianAddBookForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Libarian\LibarianAddGenrePublisherAuthorForm.resx">
+      <DependentUpon>LibarianAddGenrePublisherAuthorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Libarian\LibarianChangePassword.resx">
       <DependentUpon>LibarianChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libarian\LibarianEditBookForm.resx">
+      <DependentUpon>LibarianEditBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libarian\LibarianEditGenrePublisherAuthorForm.resx">
+      <DependentUpon>LibarianEditGenrePublisherAuthorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Libarian\LibarianEditProfile.resx">
       <DependentUpon>LibarianEditProfile.cs</DependentUpon>

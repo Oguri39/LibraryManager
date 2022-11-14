@@ -24,7 +24,8 @@ namespace NormalLibrary.Students
         }
         public void formLoad() {
             flowLayoutPanel.Controls.Clear();
-            list_book = DatabaseConnection.GetBookList("SELECT * FROM Book WHERE Book.BookIsNew = 1");
+            list_book.Clear();
+            list_book = DatabaseConnection.GetBookList("SELECT * FROM Book WHERE Book.BookIsNew = 1 AND Book.BookIsDeleted = 0;");
             for (int i = 0; i < list_book.Count; i++) {
                 List<Author> list_author = new List<Author>();
                 list_author = DatabaseConnection.GetAuthorList("SELECT * FROM Book JOIN AuthorHasBooks  ON Book.BookId = AuthorHasBooks.BookId JOIN Author  ON Author.AuthorId = AuthorHasBooks.AuthorId WHERE Book.BookId = " + list_book[i].BookId + ";");

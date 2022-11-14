@@ -145,8 +145,6 @@ namespace NormalLibrary.Students
                 {
                     String BorrowRecieptBorrowedDate = DateTime.Now.ToShortDateString();
                     String BorrowRecieptDeadline = DateTime.Now.AddDays(Int32.Parse(txtBorrowedDays.Text.Trim())).ToShortDateString();
-                    Console.WriteLine(BorrowRecieptBorrowedDate);
-                    Console.WriteLine(BorrowRecieptDeadline);
                     DatabaseConnection.CreateCommand("INSERT INTO BorrowReciept (BorrowRecieptBorrowedDate,BorrowRecieptDeadline,BorrowRecieptQuantity,BorrowRecieptIsReturned,BookId,UserId) VALUES " +
                          "('" + BorrowRecieptBorrowedDate + "','" + BorrowRecieptDeadline + "'," + 1 + "," + 0 + "," + _id + "," + Program.login_user.UserId + ");"); ;
                     int new_reciept_id = DatabaseConnection.GetBorrowedRecieptId(Program.login_user.UserId);
