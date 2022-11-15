@@ -35,7 +35,13 @@ namespace NormalLibrary.Libarian
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (Program.login_user.UserRoles == 3)
+            {
+                this.Close();
+            }
+            else { 
+                Application.Exit(); 
+            }
         }
 
         private void btnResize_Click(object sender, EventArgs e)
@@ -76,6 +82,9 @@ namespace NormalLibrary.Libarian
             load_return();
             load_borrowed();
             load_books();
+            if (Program.login_user.UserRoles == 3) {
+                btnProfile.Visible = false;
+            }
         }
         private void load_library() {
             dgvLibrary.DataSource = DatabaseConnection.GetDataTable("SELECT Book.BookId, Book.BookName, Book.BookNumberOfPages, Book.BookProductDate, Book.BookNumberOfCopies,Book.BookFee,Book.BookIsNew,Genre.GenreName,Author.AuthorName FROM Book JOIN BookHasGenre ON Book.BookId = BookHasGenre.BookId JOIN Genre ON Genre.GenreId = BookHasGenre.GenreId JOIN AuthorHasBooks  ON Book.BookId = AuthorHasBooks.BookId JOIN Author  ON Author.AuthorId = AuthorHasBooks.AuthorId WHERE Book.BookIsDeleted = 0");

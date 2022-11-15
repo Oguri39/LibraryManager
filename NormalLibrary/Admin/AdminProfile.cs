@@ -1,4 +1,4 @@
-﻿using NormalLibrary.Students;
+﻿using NormalLibrary.Libarian;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,9 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NormalLibrary.Libarian
+namespace NormalLibrary.Admin
 {
-    public partial class LibrianProfile : Form
+    public partial class AdminProfile : Form
     {
         private const int WM_NCLBUTTONDOWN = 0xA1;
         private const int HT_CAPTION = 0x2;
@@ -19,17 +19,19 @@ namespace NormalLibrary.Libarian
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
-        LibarianMain tmp_main;
+        AdminMain tmp_main;
         UserProfile user_profile;
-        public LibrianProfile(LibarianMain tmp_main)
+        public AdminProfile(AdminMain tmp_main)
         {
             InitializeComponent();
             this.tmp_main = tmp_main;
         }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -43,26 +45,16 @@ namespace NormalLibrary.Libarian
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
-        public void LibrianProfile_Load(object sender, EventArgs e)
-        {
-            user_profile = DatabaseConnection.GetUserProfile("SELECT * FROM Profile WHERE ProfileId = " + Program.login_user.ProfileId + ";");
-            txtFirstName.Text = user_profile.ProfileFirstName;
-            txtLastName.Text = user_profile.ProfileLastName;
-            txtEmail.Text = user_profile.ProfileEmail;
-            txtPhoneNumber.Text = user_profile.ProfilePhoneNumber;
-            txtSchoolID.Text = user_profile.ProfileSchoolId;
-            txtAddress.Text = user_profile.ProfileAddress;
-        }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            LibarianEditProfile new_form = new LibarianEditProfile(this);
+            AdminEditProfile new_form = new AdminEditProfile(this);
             new_form.Show();
         }
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            LibarianChangePassword new_form = new LibarianChangePassword();
+            AdminChangePassword new_form = new AdminChangePassword();
             new_form.Show();
         }
 
@@ -73,6 +65,17 @@ namespace NormalLibrary.Libarian
             Program.login_user = null;
             tmp_main.Close();
             this.Close();
+        }
+
+        public void AdminProfile_Load(object sender, EventArgs e)
+        {
+            user_profile = DatabaseConnection.GetUserProfile("SELECT * FROM Profile WHERE ProfileId = " + Program.login_user.ProfileId + ";");
+            txtFirstName.Text = user_profile.ProfileFirstName;
+            txtLastName.Text = user_profile.ProfileLastName;
+            txtEmail.Text = user_profile.ProfileEmail;
+            txtPhoneNumber.Text = user_profile.ProfilePhoneNumber;
+            txtSchoolID.Text = user_profile.ProfileSchoolId;
+            txtAddress.Text = user_profile.ProfileAddress;
         }
     }
 }

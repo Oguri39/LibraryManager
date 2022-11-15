@@ -55,6 +55,7 @@ namespace NormalLibrary.Students
         {
             LoginForm login_form = new LoginForm();
             login_form.Show();
+            Program.login_user = null;
             tmp_main.Close();
             this.Close();
         }
